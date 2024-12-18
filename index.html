@@ -11,43 +11,132 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./dist/css/style.css" />
   </head>
   <body>
     <!--Header-->
-    <header>
-      <div>
-        <nav>
-          <a href="./index.html"
-            ><img src="./images/Header/Logo-05.png" alt=""
-          /></a>
-          <ul>
-            <li><a href="">Про комплекс</a></li>
-            <li><a href="">Галерея</a></li>
-            <li><a href="">Ген-план</a></li>
-            <li><a href="">Хід Будівництва</a></li>
-            <li><a href="">Апартаменти</a></li>
-            <li><a href="">Контакти</a></li>
-          </ul>
-        </nav>
-        <div>
-          <ul>
-            <li>
-              <svg width="47" height="47">
-                <use href="./images/SVG/symbol-defs.svg#icon-facebook"></use>
+    <header class="header">
+      <div class="container header-container">
+          <div>
+            <div class="header-mobile-wrapper">
+              <a href="./index.html" class="header-mobile-logo"
+                ><img src="./images/Header/Logo-05.png" alt=""
+              /></a>
+              <svg width="24" height="24" class="header-burger-icon">
+                <use href="./images/SVG/symbol-defs.svg#icon-menu"></use>
               </svg>
-            </li>
-            <li>
-              <svg width="47" height="47">
-                <use href="./images/SVG/symbol-defs.svg#icon-instagram"></use>
-              </svg>
-            </li>
-            <li>
-              <svg width="47" height="47">
-                <use href="./images/SVG/symbol-defs.svg#icon-youTube"></use>
-              </svg>
-            </li>
-          </ul>
+            </div>
+
+            <div class="header-desc-wrapper">
+              <nav>
+                <ul>
+                  <li><a href="">Про комплекс</a></li>
+                  <li><a href="">Галерея</a></li>
+                  <li><a href="">Ген-план</a></li>
+                  <li><a href="">Хід Будівництва</a></li>
+                  <li><a href="">Апартаменти</a></li>
+                  <li><a href="">Контакти</a></li>
+                </ul>
+              </nav>
+              <div>
+                <ul>
+                  <li>
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg width="47" height="47">
+                        <use
+                          href="./images/SVG/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg width="47" height="47">
+                        <use
+                          href="./images/SVG/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg width="47" height="47">
+                        <use
+                          href="./images/SVG/symbol-defs.svg#icon-youTube"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--Mobile Menu-->
+          <div class="header-menu-wrapper">
+            <a href="./index.html"
+              ><img src="./images/Header/Logo-05.png" alt=""
+            /></a>
+            <nav>
+              <ul>
+                <li><a href="">Про комплекс</a></li>
+                <li><a href="">Галерея</a></li>
+                <li><a href="">Ген-план</a></li>
+                <li><a href="">Хід Будівництва</a></li>
+                <li><a href="">Апартаменти</a></li>
+                <li><a href="">Контакти</a></li>
+              </ul>
+            </nav>
+            <div>
+              <ul>
+                <li>
+                  <a href="" target="_blank" rel="noopener noreferrer nofollow">
+                    <svg width="47" height="47">
+                      <use
+                        href="./images/SVG/symbol-defs.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" target="_blank" rel="noopener noreferrer nofollow">
+                    <svg width="47" height="47">
+                      <use
+                        href="./images/SVG/symbol-defs.svg#icon-instagram"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" target="_blank" rel="noopener noreferrer nofollow">
+                    <svg width="47" height="47">
+                      <use
+                        href="./images/SVG/symbol-defs.svg#icon-youTube"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -55,500 +144,542 @@
 
     <main>
       <!-- Hero -->
-      <section>
-        <div>VD GROUP</div>
-        <div>
-          <h1>апартаменти в серці курорту</h1>
-          <svg width="202" height="51">
-            <use href="./images/SVG/symbol-defs.svg#icon-logotype"></use>
-          </svg>
-          <p>з найбільшою пішохідною зоною</p>
-        </div>
-        <svg width="94" height="129">
-          <use href="./images/SVG/symbol-defs.svg#icon-call-to-action"></use>
-        </svg>
-        <div>
-          <svg width="120" height="120">
-            <use
-              href="./images/SVG/symbol-defs.svg#icon-arcticons_verizon-messages"
-            ></use>
-          </svg>
-          <a href="">отримати комерційну пропозицію</a>
-          <svg width="120" height="120">
-            <use href="./images/SVG/symbol-defs.svg#icon-call"></use>
-          </svg>
+      <section class="hero">
+        <div class="container hero-container">
+          <div>
+            <h1 class="hero-title">апартаменти в серці курорту</h1>
+            <div class="hero-bukovel">
+              <svg width="110" height="28">
+                <use href="./images/SVG/symbol-defs.svg#icon-logotype"></use>
+              </svg>
+            </div>
+            <p class="hero-subtitle">з найбільшою пішохідною зоною</p>
+          </div>
+          <div class="hero-sign">
+            <p class="hero-sign-text">VD GROUP</p>
+          </div>
+          <div class="hero-social">
+            <a href="#" target="_blank" rel="noopener noreferrer nofollow">
+                <svg width="54" height="54">
+                <use
+                  href="./images/SVG/symbol-defs.svg#icon-arcticons_verizon-messages"
+                ></use>
+              </svg>
+            </a>
+            <a href="#" class="hero-link">отримати комерційну пропозицію</a>
+            <a href="#" target="_blank" rel="noopener noreferrer nofollow">        
+            <svg width="54" height="54">
+              <use href="./images/SVG/symbol-defs.svg#icon-call"></use>
+            </svg></a>
+
+          </div>
         </div>
       </section>
       <!-- Hero -->
 
       <!-- About -->
-      <section>
-        <h2>Про комплекс</h2>
-        <p>
-          Ескейп сіті апартментс - нове місто на карті Bukovel площею біля 8 Га,
-          де сімейні цінності, турбота та любов до ближніх - відчуваються
-          особливо, та виводяться на найвищий рівень.У нас, в українців, любов
-          проявляється турботою. Ми даємо нашим рідним найцінніше. А що може
-          бути коштовнішим за безпеку, за щасливе майбутнє ваших дітей, за
-          впевненість в завтрашньому дні, за спокій та безтурботний емоційний
-          стан батьків, про який ми забули за останні роки….ці речі безцінні,
-          проте, як і більшість речей, які обумовлюють турботу, вони потребують
-          вашої уваги, ситуацій і локацій, які сприяють цьому…
-        </p>
-        <a href="">Детальніше</a>
+      <section class="about">
+        <div class="container about-container">
+          <h2 class="about-title">Про комплекс</h2>
+          <p class="about-text"> 
+            ESCAPE City – нове місто на карті Bukovel площею 8 Га, з унікальною архітектурою та дизайном, над яким більше року працювали кращі архітектурні компанії світу. Масштаб проекту вражає сміливістю, гармонійним поєднанням природи, екологічності, етнічності з технологіями та найновітнішими технічними рішеннями щодо будівництва преміального житла. «Місто втечі». Саме втекти від буденності, турбот, проблем, а інколи і реалії хочеться всім без виключення жителям міст. 
+Нам хочеться потрапити в місце де ми поринемо в зовсім інше життя, яке поєднує в собі спокій, безпеку та відновлення і одночасно динаміку надсучасного курорту України.
+В місце, де поруч з можливістю поєднання з природою, колоритністю та аутентичним антуражем української культури пропонується найвищий сервіс та інфраструктура, що створює повноцінні умови для відпочинку та відновлення. А панорамні види з вікон Ваших апартаментів вражають мальовничістю карпатських гір та одночасно манять до гомінких площ, де окрему увагу приділено сімейному дозвіллю з захоплюючою інтерактивною історією.
+«Escape City» це 8 елітних готельних комплексів з власною преміальною рекреаційною інфраструктурою, поєднані в єдиний простір гірського міста майбутнього, з неймовірною футуристичною інтерактивною пригодою, яка втілена по всій території міста Escape City. Саме така концепція, її масштабність та ексклюзивність, забезпечить туристичну привабливість всього комплексу, залучивши мільйони туристів.
+Ми впевнені, що саме така концепція перевершить очікування і зробить Escape City найпопулярнішим і найуспішнішим місцем для інвестицій та відпочинку в регіоні, змінивши ринок девелопменту та підхід до будівництва туристичної нерухомості назавжди.
+          </p>
+          <button class="about-btn" type="button">Детальніше</button>
+        </div>
       </section>
       <!-- About -->
 
       <!-- Gallery -->
       <section>
-        <h2>Галерея</h2>
-        <ul>
-          <li><img src="./images/Gallery/6.jpg" alt="apartament" /></li>
-          <li><img src="./images/Gallery/7.jpg" alt="" /></li>
-          <li><img src="./images/Gallery/Rectangle 165.jpg" alt="" /></li>
-          <li><img src="./images/Gallery/Rectangle 166.jpg" alt="" /></li>
-          <li><img src="./images/Gallery/Rectangle 167.jpg" alt="" /></li>
-        </ul>
-        <a href="#">
-          <svg width="25" height="30">
-            <use href="./images/SVG/symbol-defs.svg#icon-vector"></use>
-          </svg>
-          <p>Відео-презентація</p>
-        </a>
+        <div class="container">
+          <h2>Галерея</h2>
+          <ul>
+            <li><img src="./images/Gallery/6.jpg" alt="apartament" /></li>
+            <li><img src="./images/Gallery/7.jpg" alt="" /></li>
+            <li><img src="./images/Gallery/Rectangle 165.jpg" alt="" /></li>
+            <li><img src="./images/Gallery/Rectangle 166.jpg" alt="" /></li>
+            <li><img src="./images/Gallery/Rectangle 167.jpg" alt="" /></li>
+          </ul>
+          <a href="#">
+            <svg width="25" height="30">
+              <use href="./images/SVG/symbol-defs.svg#icon-vector"></use>
+            </svg>
+            <p>Відео-презентація</p>
+          </a>
+        </div>
       </section>
       <!-- Gallery -->
 
       <!-- Location -->
       <section>
-        <div>
-          <img src="./images/Location/base.png" alt="" />
-          <img src="./images/Location/map.jpg" alt="location" />
-        </div>
-        <div>
-          <h2>Розташування та оточення</h2>
-          <p>
-            Маючи унікальну локацію, в оточенні гір, лісу, річок та озер, в
-            найцентральнішіі частині курорту в осередку інфраструктури та
-            комфорту для повсякденного життя - ми створили унікальний проєкт,
-            над яким працювали кращі світові архітектори та дизайнери більше
-            року. На території біля 8 Га буде створено місто, з унікальною
-            концепцією, неповторною філософією та наповненням.
-          </p>
-          <a href="#">Детальніше</a>
+        <div class="container">
+          <div>
+            <img src="./images/Location/base.png" alt="" />
+            <img src="./images/Location/map.jpg" alt="location" />
+          </div>
+          <div>
+            <h2>Розташування та оточення</h2>
+            <p>
+              Маючи унікальну локацію, в оточенні гір, лісу, річок та озер, в
+              найцентральнішіі частині курорту в осередку інфраструктури та
+              комфорту для повсякденного життя - ми створили унікальний проєкт,
+              над яким працювали кращі світові архітектори та дизайнери більше
+              року. На території біля 8 Га буде створено місто, з унікальною
+              концепцією, неповторною філософією та наповненням.
+            </p>
+            <a href="#">Детальніше</a>
+          </div>
         </div>
       </section>
       <!-- Location -->
 
       <!-- Information -->
       <section>
-        <h3>Унікальне поєднання відпочинку та бізнесу</h3>
-        <div>
-          <ul>
-            <li><a href="#">Технічні характеристики</a></li>
-            <li><a href="">Реалізовані проекти</a></li>
-            <li><a href="">Керуюча компанія</a></li>
-            <li><a href="">Документація</a></li>
-          </ul>
-          <ul>
-            <li>
-              <svg width="100" height="100">
-                <use href="./images/SVG/symbol-defs.svg#icon-hotel-1"></use>
-              </svg>
-              <div>
-                <h5>Клас</h5>
-                <p>Преміум</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use
-                  href="./images/SVG/symbol-defs.svg#icon-building-2-1"
-                ></use>
-              </svg>
-              <div>
-                <h5>Черги</h5>
-                <p>8</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use
-                  href="./images/SVG/symbol-defs.svg#icon-skyscraper-2-1"
-                ></use>
-              </svg>
-              <div>
-                <h5>Поверховість</h5>
-                <p>6-8</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use href="./images/SVG/symbol-defs.svg#icon-hook-1"></use>
-              </svg>
-              <div>
-                <h5>Технології будівництва</h5>
-                <p>Монолітно-каркасна</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use
-                  href="./images/SVG/symbol-defs.svg#icon-brickwall-2-1"
-                ></use>
-              </svg>
-              <div>
-                <h5>Стіни</h5>
-                <p>Моноліт, цегла</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use href="./images/SVG/symbol-defs.svg#icon-metal-1"></use>
-              </svg>
-              <div>
-                <h5>Утеплення</h5>
-                <p>Мінеральна вата та вентильований фасад</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use
-                  href="./images/SVG/symbol-defs.svg#icon-underfloor-heating-1"
-                ></use>
-              </svg>
-              <div>
-                <h5>Опалення</h5>
-                <p>Тепла підлога</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use href="./images/SVG/symbol-defs.svg#icon-height-2-1"></use>
-              </svg>
-              <div>
-                <h5>Висота стелі</h5>
-                <p>2.7 (від підлоги до стелі)</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use
-                  href="./images/SVG/symbol-defs.svg#icon-icon-apartment"
-                ></use>
-              </svg>
-              <div>
-                <h5>Кількість апартаментів</h5>
-                <p>черга №1 400</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use
-                  href="./images/SVG/symbol-defs.svg#icon-renovation-1"
-                ></use>
-              </svg>
-              <div>
-                <h5>Оздоблення</h5>
-                <p>“Під ключ”</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use href="./images/SVG/symbol-defs.svg#icon-forest-5-1"></use>
-              </svg>
-              <div>
-                <h5>Закрита территорія</h5>
-                <p>7,8 ГА</p>
-              </div>
-            </li>
-            <li>
-              <svg width="100" height="100">
-                <use
-                  href="./images/SVG/symbol-defs.svg#icon-car-parking-1"
-                ></use>
-              </svg>
-              <div>
-                <h5>Паркінг</h5>
-                <p>2-х рівневий підземний</p>
-              </div>
-            </li>
-          </ul>
+        <div class="container">
+          <h3>Унікальне поєднання відпочинку та бізнесу</h3>
+          <div>
+            <ul>
+              <li><a href="#">Технічні характеристики</a></li>
+              <li><a href="">Реалізовані проекти</a></li>
+              <li><a href="">Керуюча компанія</a></li>
+              <li><a href="">Документація</a></li>
+            </ul>
+            <ul>
+              <li>
+                <svg width="100" height="100">
+                  <use href="./images/SVG/symbol-defs.svg#icon-hotel-1"></use>
+                </svg>
+                <div>
+                  <h5>Клас</h5>
+                  <p>Преміум</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use
+                    href="./images/SVG/symbol-defs.svg#icon-building-2-1"
+                  ></use>
+                </svg>
+                <div>
+                  <h5>Черги</h5>
+                  <p>8</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use
+                    href="./images/SVG/symbol-defs.svg#icon-skyscraper-2-1"
+                  ></use>
+                </svg>
+                <div>
+                  <h5>Поверховість</h5>
+                  <p>6-8</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use href="./images/SVG/symbol-defs.svg#icon-hook-1"></use>
+                </svg>
+                <div>
+                  <h5>Технології будівництва</h5>
+                  <p>Монолітно-каркасна</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use
+                    href="./images/SVG/symbol-defs.svg#icon-brickwall-2-1"
+                  ></use>
+                </svg>
+                <div>
+                  <h5>Стіни</h5>
+                  <p>Моноліт, цегла</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use href="./images/SVG/symbol-defs.svg#icon-metal-1"></use>
+                </svg>
+                <div>
+                  <h5>Утеплення</h5>
+                  <p>Мінеральна вата та вентильований фасад</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use
+                    href="./images/SVG/symbol-defs.svg#icon-underfloor-heating-1"
+                  ></use>
+                </svg>
+                <div>
+                  <h5>Опалення</h5>
+                  <p>Тепла підлога</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use
+                    href="./images/SVG/symbol-defs.svg#icon-height-2-1"
+                  ></use>
+                </svg>
+                <div>
+                  <h5>Висота стелі</h5>
+                  <p>2.7 (від підлоги до стелі)</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use
+                    href="./images/SVG/symbol-defs.svg#icon-icon-apartment"
+                  ></use>
+                </svg>
+                <div>
+                  <h5>Кількість апартаментів</h5>
+                  <p>черга №1 400</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use
+                    href="./images/SVG/symbol-defs.svg#icon-renovation-1"
+                  ></use>
+                </svg>
+                <div>
+                  <h5>Оздоблення</h5>
+                  <p>“Під ключ”</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use
+                    href="./images/SVG/symbol-defs.svg#icon-forest-5-1"
+                  ></use>
+                </svg>
+                <div>
+                  <h5>Закрита территорія</h5>
+                  <p>7,8 ГА</p>
+                </div>
+              </li>
+              <li>
+                <svg width="100" height="100">
+                  <use
+                    href="./images/SVG/symbol-defs.svg#icon-car-parking-1"
+                  ></use>
+                </svg>
+                <div>
+                  <h5>Паркінг</h5>
+                  <p>2-х рівневий підземний</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- Information -->
 
       <!-- Suggestion 1-->
       <section>
-        <h3>Отримати комерційну пропозицію</h3>
-        <form name="suggestion-form">
-          <input type="text" name="user-name" placeholder="Ваше ім'я" />
-          <input
-            type="text"
-            name="phone-number"
-            placeholder="+380 (99) 999 99 99"
-          />
-          <button type="submit">Отримати</button>
-        </form>
-        <p>Наш менеджер зателефонує вам в найближчий час</p>
+        <div class="container">
+          <h3>Отримати комерційну пропозицію</h3>
+          <form name="suggestion-form">
+            <input type="text" name="user-name" placeholder="Ваше ім'я" />
+            <input
+              type="text"
+              name="phone-number"
+              placeholder="+380 (99) 999 99 99"
+            />
+            <button type="submit">Отримати</button>
+          </form>
+          <p>Наш менеджер зателефонує вам в найближчий час</p>
+        </div>
       </section>
       <!-- Suggestion 1-->
 
       <!-- About builder -->
       <section>
-        <h2>Про забудовника</h2>
-        <div>
+        <div class="container">
+          <h2>Про забудовника</h2>
           <div>
-            <img src="./images/AboutBuilder/LOGO_image.jpg" alt="logo" />
-            <img src="./images/AboutBuilder/Image_build.jpg" alt="builder" />
+            <div>
+              <img src="./images/AboutBuilder/LOGO_image.jpg" alt="logo" />
+              <img src="./images/AboutBuilder/Image_build.jpg" alt="builder" />
+            </div>
+            <p>
+              Забудовником Escape City є будівельна компанія VD Group
+              Development, яка є забудовником преміального готелю - GLACIER
+              PREMIUM APARTMENTS, REST & SKII, West Hills, GIRSKY, GARDKIY
+              DELUXE, MARMAROS, HEY та інші. Компанія вже більше 17 років
+              розбудовує Bukovel, є офіційним партнером курорту та
+              спеціалізується в Bukovel на будівництві обʼєктів категорії LUXE.
+            </p>
           </div>
-          <p>
-            Забудовником Escape City є будівельна компанія VD Group Development,
-            яка є забудовником преміального готелю - GLACIER PREMIUM APARTMENTS,
-            REST & SKII, West Hills, GIRSKY, GARDKIY DELUXE, MARMAROS, HEY та
-            інші. Компанія вже більше 17 років розбудовує Bukovel, є офіційним
-            партнером курорту та спеціалізується в Bukovel на будівництві
-            обʼєктів категорії LUXE.
-          </p>
         </div>
       </section>
       <!-- About builder -->
 
       <!-- Invest -->
       <section>
-        <div>
-          <h2>Чому варто інвестувати в Ескейп сіті</h2>
-          <ul>
-            <li>
-              <img src="./images/Invest/Card1.jpg" alt="build" />
-              <p>Локація</p>
-            </li>
-            <li>
-              <img src="./images/Invest/Card2.jpg" alt="forest" />
-              <p>Екологічність</p>
-            </li>
-            <li>
-              <img src="./images//Invest/Card3.jpg" alt="street" />
-              <p>Інфраструктура</p>
-            </li>
-          </ul>
-          <a href="#">Дивитися більше</a>
+        <div class="container">
+          <div>
+            <h2>Чому варто інвестувати в Ескейп сіті</h2>
+            <ul>
+              <li>
+                <img src="./images/Invest/Card1.jpg" alt="build" />
+                <p>Локація</p>
+              </li>
+              <li>
+                <img src="./images/Invest/Card2.jpg" alt="forest" />
+                <p>Екологічність</p>
+              </li>
+              <li>
+                <img src="./images//Invest/Card3.jpg" alt="street" />
+                <p>Інфраструктура</p>
+              </li>
+            </ul>
+            <a href="#">Дивитися більше</a>
+          </div>
         </div>
       </section>
       <!-- Invest -->
 
       <!-- Suggestion 2-->
       <section>
-        <h3>Отримати комерційну пропозицію</h3>
-        <form name="suggestion-form">
-          <input type="text" name="user-name" placeholder="Ваше ім'я" />
-          <input
-            type="text"
-            name="phone-number"
-            placeholder="+380 (99) 999 99 99"
-          />
-          <button type="submit">Отримати</button>
-        </form>
+        <div class="container">
+          <h3>Отримати комерційну пропозицію</h3>
+          <form name="suggestion-form">
+            <input type="text" name="user-name" placeholder="Ваше ім'я" />
+            <input
+              type="text"
+              name="phone-number"
+              placeholder="+380 (99) 999 99 99"
+            />
+            <button type="submit">Отримати</button>
+          </form>
+        </div>
       </section>
 
       <!-- Builder path-->
       <section>
-        <h2>Хід будівництва</h2>
-        <p>Вересень 2023</p>
-        <ul>
-          <li><img src="./images/BuilderPath/1.jpg" alt="builders" /></li>
-          <li><img src="./images/BuilderPath/2.jpg" alt="builders" /></li>
-          <li><img src="./images/BuilderPath/3.jpg" alt="builders" /></li>
-          <li><img src="./images/BuilderPath/4.jpg" alt="builders" /></li>
-          <li><img src="./images/BuilderPath/5.jpg" alt="builders" /></li>
-        </ul>
+        <div class="container">
+          <h2>Хід будівництва</h2>
+          <p>Вересень 2023</p>
+          <ul>
+            <li><img src="./images/BuilderPath/1.jpg" alt="builders" /></li>
+            <li><img src="./images/BuilderPath/2.jpg" alt="builders" /></li>
+            <li><img src="./images/BuilderPath/3.jpg" alt="builders" /></li>
+            <li><img src="./images/BuilderPath/4.jpg" alt="builders" /></li>
+            <li><img src="./images/BuilderPath/5.jpg" alt="builders" /></li>
+          </ul>
+        </div>
       </section>
       <!-- Builder path-->
 
       <!-- Choose apartment-->
       <section>
-        <h2>Оберіть свої апартаменти</h2>
-        <ul>
-          <li><a href="#">Студія від 23м2</a></li>
-          <li><a href="#">Студія від 23м2</a></li>
-          <li><a href="#">Студія 33-59 м2</a></li>
-          <li><a href="#">Апартаменти з терасою</a></li>
-          <li><a href="#">Індивідуальне 50м2+</a></li>
-        </ul>
-        <ul>
-          <li>
-            <img
-              src="./images//ChooseApartment/plan.jpg"
-              alt="builder's plan"
-            />
-          </li>
-          <li>
-            <img
-              src="./images//ChooseApartment/plan.jpg"
-              alt="builder's plan"
-            />
-          </li>
-          <li>
-            <img
-              src="./images//ChooseApartment/plan.jpg"
-              alt="builder's plan"
-            />
-          </li>
-          <li>
-            <img
-              src="./images//ChooseApartment/plan.jpg"
-              alt="builder's plan"
-            />
-          </li>
-          <li>
-            <img
-              src="./images//ChooseApartment/plan.jpg"
-              alt="builder's plan"
-            />
-          </li>
-        </ul>
-        <a href="#">БІЛЬШЕ ДЕТАЛЕЙ</a>
+        <div class="container">
+          <h2>Оберіть свої апартаменти</h2>
+          <ul>
+            <li><a href="#">Студія від 23м2</a></li>
+            <li><a href="#">Студія від 23м2</a></li>
+            <li><a href="#">Студія 33-59 м2</a></li>
+            <li><a href="#">Апартаменти з терасою</a></li>
+            <li><a href="#">Індивідуальне 50м2+</a></li>
+          </ul>
+          <ul>
+            <li>
+              <img
+                src="./images//ChooseApartment/plan.jpg"
+                alt="builder's plan"
+              />
+            </li>
+            <li>
+              <img
+                src="./images//ChooseApartment/plan.jpg"
+                alt="builder's plan"
+              />
+            </li>
+            <li>
+              <img
+                src="./images//ChooseApartment/plan.jpg"
+                alt="builder's plan"
+              />
+            </li>
+            <li>
+              <img
+                src="./images//ChooseApartment/plan.jpg"
+                alt="builder's plan"
+              />
+            </li>
+            <li>
+              <img
+                src="./images//ChooseApartment/plan.jpg"
+                alt="builder's plan"
+              />
+            </li>
+          </ul>
+          <a href="#">БІЛЬШЕ ДЕТАЛЕЙ</a>
+        </div>
       </section>
       <!-- Choose apartment-->
 
       <!-- Events-->
       <section>
-        <div>
-          <h2>Події</h2>
-          <ul>
-            <li><img src="./images/Events/event-1.jpg" alt="event" /></li>
-          </ul>
-          <p>
-            Glacier знаходиться в самому серці найвідомішого українського
-            курорту "Буковель" на березі озера "Молодість". Поруч з
-            апарт-готелем розташовані найвідоміші туристичні локації: Voda Club,
-            Гуцул-ленд, Аквапарк та ін.
-          </p>
+        <div class="container">
+          <div>
+            <h2>Події</h2>
+            <ul>
+              <li><img src="./images/Events/event-1.jpg" alt="event" /></li>
+            </ul>
+            <p>
+              Glacier знаходиться в самому серці найвідомішого українського
+              курорту "Буковель" на березі озера "Молодість". Поруч з
+              апарт-готелем розташовані найвідоміші туристичні локації: Voda
+              Club, Гуцул-ленд, Аквапарк та ін.
+            </p>
+          </div>
         </div>
       </section>
       <!-- Events-->
 
       <!-- Offices-->
       <section>
-        <h2>Наше розташування</h2>
-        <ul>
-          <li>
-            <div>
-              <h5>Буковель</h5>
-              <p>Івано-Франківська область</p>
-            </div>
-            <img src="./images/Offices/Component-1.jpg" alt="employee" />
-            <div>
-              <p>Керівник Дар'я</p>
-              <p>+380 (63) 623 00</p>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <a href="#">Відділ продажу №1 поряд з озером Молодості</a>
-                </li>
-                <li><a href="#">Відділ продажу №2 Урочище Вишні </a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h5>Київ</h5>
-            </div>
-            <img src="./images/Offices/Component-2.jpg" alt="employee" />
-            <div>
-              <p>Керівник Віктор</p>
-              <p>+380 (93) 5910707</p>
-            </div>
-            <div>
-              <a href="#"
-                >Вул. Волоська 6/14 (Головний Офіс Курорту Буковель В Києві)</a
-              >
-            </div>
-          </li>
-          <li>
-            <div>
-              <h5>Львів</h5>
-            </div>
-            <img src="./images/Offices/Component-3.jpg" alt="employee" />
-            <div>
-              <p>Керівник Євгенія</p>
-              <p>+380 (95) 591 07 07</p>
-            </div>
-            <div>
-              <a href="#">Стрийська 48Г (Бізнес центр Lviv Tech City)</a>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h5>Дніпро</h5>
-            </div>
-            <img src="./images/Offices/Component-4.jpg" alt="employee" />
-            <div>
-              <p>Керівник Ольга</p>
-              <p>+380 (50) 5910707</p>
-            </div>
-            <div>
-              <a href="">Проспект Дмитра Яворницького,22ТЦ Атріум, 2 поверх</a>
-            </div>
-          </li>
-        </ul>
+        <div class="container">
+          <h2>Наше розташування</h2>
+          <ul>
+            <li>
+              <div>
+                <h5>Буковель</h5>
+                <p>Івано-Франківська область</p>
+              </div>
+              <img src="./images/Offices/Component-1.jpg" alt="employee" />
+              <div>
+                <p>Керівник Дар'я</p>
+                <p>+380 (63) 623 00</p>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <a href="#">Відділ продажу №1 поряд з озером Молодості</a>
+                  </li>
+                  <li><a href="#">Відділ продажу №2 Урочище Вишні </a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h5>Київ</h5>
+              </div>
+              <img src="./images/Offices/Component-2.jpg" alt="employee" />
+              <div>
+                <p>Керівник Віктор</p>
+                <p>+380 (93) 5910707</p>
+              </div>
+              <div>
+                <a href="#"
+                  >Вул. Волоська 6/14 (Головний Офіс Курорту Буковель В
+                  Києві)</a
+                >
+              </div>
+            </li>
+            <li>
+              <div>
+                <h5>Львів</h5>
+              </div>
+              <img src="./images/Offices/Component-3.jpg" alt="employee" />
+              <div>
+                <p>Керівник Євгенія</p>
+                <p>+380 (95) 591 07 07</p>
+              </div>
+              <div>
+                <a href="#">Стрийська 48Г (Бізнес центр Lviv Tech City)</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h5>Дніпро</h5>
+              </div>
+              <img src="./images/Offices/Component-4.jpg" alt="employee" />
+              <div>
+                <p>Керівник Ольга</p>
+                <p>+380 (50) 5910707</p>
+              </div>
+              <div>
+                <a href=""
+                  >Проспект Дмитра Яворницького,22ТЦ Атріум, 2 поверх</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- Offices-->
     </main>
 
     <!-- Footer-->
     <footer>
-      <div>
+      <div class="container">
         <div>
-          <h4>Дізнатись більше інформації</h4>
-          <p>+38 097 591 07 07</p>
-          <a href="#">Зв’язатись з нами</a>
-        </div>
-        <div>
-          <nav>
-            <a href="./index.html"
-              ><img src="./images/Header/Logo-05.png" alt="logo"
-            /></a>
-            <ul>
-              <li><a href="">Про комплекс</a></li>
-              <li><a href="">Галерея</a></li>
-              <li><a href="">Ген-план</a></li>
-              <li><a href="">Хід Будівництва</a></li>
-              <li><a href="">Апартаменти</a></li>
-              <li><a href="">Контакти</a></li>
-            </ul>
-          </nav>
           <div>
-            <ul>
-              <li>
-                <svg width="47" height="47">
-                  <use href="./images/SVG/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </li>
-              <li>
-                <svg width="47" height="47">
-                  <use href="./images/SVG/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </li>
-              <li>
-                <svg width="47" height="47">
-                  <use href="./images/SVG/symbol-defs.svg#icon-youTube"></use>
-                </svg>
-              </li>
-            </ul>
+            <h4>Дізнатись більше інформації</h4>
+            <p>+38 097 591 07 07</p>
+            <a href="#">Зв’язатись з нами</a>
+          </div>
+          <div>
+            <nav>
+              <a href="./index.html"
+                ><img src="./images/Header/Logo-05.png" alt="logo"
+              /></a>
+              <ul>
+                <li><a href="">Про комплекс</a></li>
+                <li><a href="">Галерея</a></li>
+                <li><a href="">Ген-план</a></li>
+                <li><a href="">Хід Будівництва</a></li>
+                <li><a href="">Апартаменти</a></li>
+                <li><a href="">Контакти</a></li>
+              </ul>
+            </nav>
+            <div>
+              <ul>
+                <li>
+                  <svg width="47" height="47">
+                    <use
+                      href="./images/SVG/symbol-defs.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg width="47" height="47">
+                    <use
+                      href="./images/SVG/symbol-defs.svg#icon-instagram"
+                    ></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg width="47" height="47">
+                    <use href="./images/SVG/symbol-defs.svg#icon-youTube"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        <p>Всі права захищені © 2023</p>
-        <p>
-          Зроблено у
-          <svg width="95" height="22">
-            <use href="./images/SVG/symbol-defs.svg#icon-group-13"></use>
-          </svg>
-        </p>
+        <div>
+          <p>Всі права захищені © 2023</p>
+          <p>
+            Зроблено у
+            <svg width="95" height="22">
+              <use href="./images/SVG/symbol-defs.svg#icon-group-13"></use>
+            </svg>
+          </p>
+        </div>
       </div>
     </footer>
     <!-- Footer-->
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

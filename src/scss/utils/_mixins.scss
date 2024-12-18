@@ -1,0 +1,39 @@
+
+@mixin visually-hidden(){
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+        
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@mixin paddings($top, $right,$bottom, $left){
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin size($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin border($width, $style, $color){
+    border-width:$width;
+    border-style: $style;
+    border-color: $color;
+}
+
+@mixin text-character($size, $height, $color){
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}
+

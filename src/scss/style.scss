@@ -1,1 +1,5 @@
-@use 'base/reset'
+@use 'base/reset';
+@use 'base/general';
+@use 'components/header';
+@use 'components/hero';
+@use 'components/about';

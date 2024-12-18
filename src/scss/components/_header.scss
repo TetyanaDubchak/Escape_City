@@ -1,0 +1,35 @@
+@use 'utils/mixins' as m;
+
+
+.header-desc-wrapper{
+    @include m.visually-hidden;
+}
+
+.header-menu-wrapper{
+    @include m.visually-hidden;
+}
+
+.header{
+    background-color: rgba(51, 51, 51, 0.46);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.header-container{
+    @include m.paddings(26px, 30px,20px,30px);
+    @include m.border(1px, solid, #777584);
+    
+}
+
+.header-mobile-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-mobile-logo{
+    @include m.size(90px, 54px)
+}
