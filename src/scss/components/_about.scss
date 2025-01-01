@@ -1,6 +1,7 @@
 @use 'utils/mixins' as m;
 @use 'utils/variables' as v;
 
+// Mobile styles
 .about{
     background-color: v.$dark-bg-c;
 }
@@ -11,24 +12,64 @@
 
 .about-title{
     @include m.text-character(20px,28px, v.$light-c-t);
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 24px;
+    @include m.title-character(400,uppercase,center,24px);
 }
 
 .about-text{
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    max-height: 140px;
-    transition: max-height 0.3s ease;
+    @include m.cut-text(15,420px);
 
     @include m.text-character(13px, 28px, v.$light-c-t);
+
+    margin-bottom: 16px;
+
+    &>span{
+        color: v.$gold-t-c;
+    }
 }
 
 .about-text.expanded {
-    -webkit-line-clamp: unset;
-    max-height: 1500px;
+    @include m.cut-text-expanded(1500px);
+}
+
+.about-btn{
+    @include m.more-btn(v.$gold-t-c);
+}
+
+// Desktop styles
+
+@media screen and (min-width: v.$bm){
+    .about {
+        background-color: v.$light-bg-c;
+    }
+
+    .about-container {
+        @include m.paddings(116px, 358px, 108px, 358px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-title {
+        @include m.text-character(36px, 35px, v.$dark-title-c);
+        font-weight: 300;
+        margin-bottom: 48px;
+    }
+
+    .about-text {
+        @include m.cut-text(5, 170px);
+        @include m.text-character(16px, 34px, v.$dark-text-c);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .about-text.expanded {
+        @include m.cut-text-expanded(612px);
+    }
+
+    .about-btn{
+        @include m.more-btn-desk(v.$gold-t-c);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }

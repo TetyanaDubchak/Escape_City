@@ -1,0 +1,28 @@
+@use 'utils/mixins' as m;
+@use 'utils/variables' as v;
+
+.events-container{
+    @include m.paddings(48px,0px,72px,0px);
+}
+
+.events-title{
+    @include m.text-character(20px,28px,v.$dark-title-c);
+    @include m.title-character(400, uppercase,center, 24px);
+}
+
+.events-video-wrapper{
+    margin-bottom: 16px;
+}
+
+.events-text-wrapper{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.events-text{
+    @include m.text-character(13px, 28px, v.$dark-text-c);
+
+    &>span{
+        color: v.$gold-t-c;
+    }
+}

@@ -1,0 +1,50 @@
+@use 'utils/mixins' as m;
+@use 'utils/variables' as v;
+
+.apartment{
+    background-color: v.$dark-bg-m-c;
+}
+
+.apartment-container{
+    @include m.paddings(72px, 0px, 72px, 0px)
+}
+
+.apartment-title{
+    @include m.text-character(20px,28px,v.$light-c-t);
+    @include m.title-character(400, uppercase,center,24px)
+}
+
+.apartment-title-wrapper{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.apartment-list-wrapper{
+    margin-bottom: 24px;
+}
+
+
+.apartment-list-link{
+    @include m.text-character(14px,50px,v.$neutral-t-c);
+    font-weight: 400;
+
+    &:hover, &:focus{
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+}
+
+.apartment-more-btn-wrapper{
+    @include m.border(1px, solid, v.$gold-t-c);
+    margin-top: 48px;
+    @include m.paddings(12px,20px,12px,20px);
+    max-width: 222px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.apartment-more-btn{
+    font-weight: 400;
+    @include m.text-character(14px,24px, v.$gold-t-c);
+    text-transform: uppercase;
+}

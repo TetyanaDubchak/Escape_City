@@ -1,0 +1,151 @@
+@use 'utils/mixins' as m;
+@use 'utils/variables' as v;
+
+
+// Mobile styles
+.builder{
+    background-color: v.$dark-bg-m-c;
+}
+
+.builder-container{
+    @include m.paddings(72px,0,72px,0);
+}
+
+.builder-title{
+    @include m.text-character(20px,28px, v.$light-c-t);
+    @include m.title-character(400,uppercase,center,48px);
+
+}
+
+.builder-logo-wrapper{
+    position: relative;
+    z-index: 10;
+    
+    @include m.size(100%, 426px);
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+
+    padding-left: 24px;
+    margin-bottom: 50px;
+}
+
+.builder-logo-building{
+    @include m.size(100px, 314px);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.builder-logo{
+    @include m.size(240px,330px);
+    position: relative;
+    z-index: 3;
+}
+
+.builder-logo-wrapper::before{
+    content: "";
+    display: inline-block;
+    @include m.size(298px, 326px);
+    @include m.border(1px,solid,v.$gold-t-c);
+    position: absolute;
+    top: 50px;
+    left: 36px;
+}
+
+.builder-text-wrapper{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.builder-text{
+    @include m.text-character(13px,28px, v.$light-c-t);
+
+    &>span{
+        color: v.$gold-t-c;
+    }
+}
+
+@media screen and (max-width: 1919px){
+.builder-logo-wrapper-extra::before {
+        content: "";
+        display: inline-block;
+        @include m.size(258px, 24px);
+        background-color: v.$dark-bg-c;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+.builder-logo-wrapper::after {
+    content: "";
+    display: inline-block;
+    @include m.size(78px, 24px);
+    background-color: v.$dark-bg-c;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+}
+
+// Desktop styles
+
+@media screen and (min-width: v.$bm){
+
+    .builder-container {
+            @include m.paddings(216px, 274px, 366px,274px);
+        }
+
+    .builder-title {
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 35px;
+        margin-bottom: 0;
+        text-transform: none;
+    }
+
+    .builder-content-wrapper{
+        display: flex;
+        column-gap: 62px;
+    }
+
+    .builder-logo-wrapper::before {
+        @include m.size(428px, 458px);
+        top: 148px;
+        left: 140px;
+    }
+
+    .builder-logo-wrapper {
+        display: block;
+        @include m.size(782px, 730px);
+        padding: 0;
+        margin: 0;
+    }
+
+    .builder-logo-wrapper-extra{
+        @include m.size(100%,100%);
+    }
+
+    .builder-logo-building {
+        @include m.size(380px, 512px);
+        top: 218px;
+    }
+
+    .builder-logo {     
+        @include m.size(377px, 515px);
+    }
+
+    .builder-text-wrapper {
+        padding:0;
+        max-width: 528px;
+        padding-top: 294px;
+    }
+
+    .builder-text {
+        font-size: 16px;
+        line-height: 34px;
+        
+    }
+}

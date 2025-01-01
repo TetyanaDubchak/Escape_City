@@ -1,0 +1,115 @@
+@use 'utils/mixins' as m;
+@use 'utils/variables' as v;
+
+
+// Mobile styles
+.gallery-container{
+    @include m.paddings(48px,0,72px, 0);
+};
+
+.gallery-title{
+    font-weight: 400;
+    @include m.text-character(20px, 28px, v.$dark-title-c);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 24px;
+};
+
+.gallery-video-link{
+    display: flex;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-video-btn{
+  @include  m.size(56px,50px);
+  margin-right: 8px;
+}
+
+.gallery-video-wrapper{
+    @include m.size(267px, 50px);
+    @include m.border(1px, solid,v.$gold-t-c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &>p{
+        color: v.$gold-t-c;
+    }
+}
+
+.swiper-gallery .swiper-slide{
+    transform: scale(0.9)!important;
+    transition: transform 0.3s!important;
+};
+
+.swiper-gallery .swiper-slide-active {
+    transform: scale(1)!important;
+}
+
+@media screen and (max-width: v.$max-mob-m) {
+    .gallery-button-prev {
+            @include m.visually-hidden
+        };
+    
+    .gallery-button-next {
+            @include m.visually-hidden
+        }
+}
+// Desktop styles
+
+@media screen and (min-width: v.$bm){
+    .gallery-container {
+        @include m.paddings(80px, 0, 72px, 126px);
+    };
+
+    .gallery-title {
+        font-size: 36px;
+        line-height: 35px;
+        font-weight: 300;
+        text-transform: none;
+        text-align: center;
+        margin-bottom: 64px;
+    };
+
+    .gallery-video-link {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery-video-btn {
+        @include m.size(90px, 68px);
+    }
+
+    .gallery-video-wrapper {
+        @include m.size(342px, 68px);
+    }
+
+    .gallery-button-prev{
+        background-color: transparent !important;
+        padding: 0 !important;
+        border-color: transparent;
+        @include m.size(68px,68px);
+        &::after{
+            content: '';
+        }
+        left: 320px;
+    }
+
+    .gallery-button-next{
+        background-color: transparent !important;
+        padding: 0 !important;
+        border-color: transparent;
+        @include m.size(68px, 68px);
+        
+        &::after {
+            content: '';
+        }
+        right: 320px;
+    }
+}
+
+
+

@@ -1,0 +1,67 @@
+@use 'utils/mixins' as m;
+@use 'utils/variables' as v;
+
+.offices{
+    background-color: v.$dark-bg-m-c;
+}
+
+.offices-container{
+    @include m.paddings(48px,0px,60px,0px);
+}
+
+.offices-title{
+    @include m.text-character(20px,28px, v.$light-c-t);
+    @include m.title-character(400, uppercase,center, 48px);
+}
+
+.offices-item{
+    @include m.paddings(24px,18px,24px,18px);
+    @include m.border(1px,solid,v.$border-off-c);
+}
+
+.offices-place-wrapper{
+    margin-bottom: 16px;
+    min-height: 48px;
+}
+
+.offices-place-city{
+    @include m.text-character(16px,24px,v.$light-c-t);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.offices-place-area{
+    @include m.text-character(12px,20px,v.$neutral-t-c);
+}
+
+.offices-picture{
+    margin-bottom: 16px;
+}
+
+.offices-contact-wrapper{
+    margin-bottom: 16px;
+}
+
+.offices-contact-name{
+    @include m.text-character(14px,26px,v.$light-c-t);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.offices-contact-phone{
+    @include m.text-character(12px,20px, v.$light-c-t);
+}
+
+.offices-adress{
+    @include m.text-character(12px,20px, v.$gold-t-c);
+    text-decoration: underline;
+}
+
+.offices-adress-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 112px;
+}
+
+

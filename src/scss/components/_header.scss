@@ -1,13 +1,11 @@
 @use 'utils/mixins' as m;
+@use 'utils/variables' as v;
 
+// Mobile styles
 
-.header-desc-wrapper{
-    @include m.visually-hidden;
-}
-
-.header-menu-wrapper{
-    @include m.visually-hidden;
-}
+// .header-menu-wrapper{
+//     display: none;
+// }
 
 .header{
     background-color: rgba(51, 51, 51, 0.46);
@@ -15,13 +13,11 @@
     top: 0;
     left: 0;
     width: 100%;
-
 }
 
 .header-container{
     @include m.paddings(26px, 30px,20px,30px);
-    @include m.border(1px, solid, #777584);
-    
+    @include m.border(1px, solid, #777584);  
 }
 
 .header-mobile-wrapper{
@@ -32,4 +28,91 @@
 
 .header-mobile-logo{
     @include m.size(90px, 54px)
+}
+
+.header-burger-btn{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+@media screen and (max-width: v.$max-mob-m) {
+    .header-desc-wrapper {
+            @include m.visually-hidden;
+        }
+}
+
+
+// Mobile menu styles
+.header-menu-wrapper{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    
+    height: auto;
+    width: 100%;
+
+    
+    background-color: v.$dark-text-c;
+    
+    overflow: auto;
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+    transform: translateX(100%);
+    
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-menu-wrapper.is-open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+// Desktop styles
+@media screen and (min-width: v.$bm) {
+    .header-burger-btn{
+        @include m.visually-hidden;
+    }
+
+    .header-mobile-logo{
+        @include m.size(116px, 70px);
+    }
+
+    .header-container {
+        @include m.paddings(20px, 80px, 20px, 46px);
+         @include m.border(1px, solid, #777584);
+    }
+
+    .header-container-desktop{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-desc-wrapper{
+        display: flex;
+        column-gap: 236px;
+        align-items: center;
+    }
+
+    .header-decktop-nav-list{
+        display: flex;
+        column-gap: 40px;
+    }
+
+    .header-decktop-nav-link{
+        @include m.text-character(16px,34px,v.$light-c-t);
+        font-weight: 400;
+    }
+
+    .header-decktop-social-list{
+        display: flex;
+        column-gap: 20px;
+    }
 }

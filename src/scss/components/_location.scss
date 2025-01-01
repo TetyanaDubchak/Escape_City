@@ -1,0 +1,113 @@
+@use 'utils/mixins' as m;
+@use 'utils/variables' as v;
+
+
+// Mobile styles
+.location-container{
+    @include m.paddings(0, 24px, 74px, 0);
+}
+
+.location-title{
+    @include m.text-character(20px, 28px, v.$dark-title-c);
+    @include m.title-character(400, uppercase, center, 48px);
+};
+
+.location-map-wrapper{
+    background-image: url(../../../images/Location/base.png);
+    background-size: contain;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 46px;
+}
+
+.location-map{
+    @include m.size(300px, 336px);
+}
+
+.location-text-wrapper{
+    padding-left: 24px;
+}
+
+.location-text{
+    @include m.text-character(13px,28px,v.$dark-title-c);
+    @include m.cut-text(11, 336px);
+    margin-bottom: 16px;
+
+    &>span{
+        color: v.$gold-t-c;
+    }
+}
+
+.location-text.expanded {
+    @include m.cut-text-expanded(1072px);
+}
+
+.location-btn{
+    @include m.more-btn(v.$gold-t-c);
+}
+
+// Desktop styles
+@media screen and (min-width: v.$bm){
+.location-container{
+    display: grid;
+    @include m.paddings(56px, 365px, 140px, 166px);
+}
+
+.location-map-wrapper{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-right: 42px;
+    margin-bottom: 0;
+    min-width: 736px;
+    min-height: 690px;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.location-map {
+    @include m.size(542px, 530px);
+   align-self: center;
+}
+
+.location-title{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: end;
+}
+
+.location-text-wrapper{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    min-width: 700px;
+    padding-left: 0;
+}
+
+.location-title {
+    font-size: 36px;
+    line-height: 35px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.location-text {
+    font-size: 16px;
+    line-height: 34px;
+    @include m.cut-text(6, 238px);
+    margin-bottom: 30px;
+}
+
+.location-text.expanded {
+    @include m.cut-text-expanded(620px);
+}
+
+.location-btn {
+    @include m.more-btn-desk(v.$gold-t-c);
+}
+
+}

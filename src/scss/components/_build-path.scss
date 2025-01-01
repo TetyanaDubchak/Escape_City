@@ -1,0 +1,17 @@
+@use 'utils/mixins' as m;
+@use 'utils/variables' as v;
+
+.build-path-container{
+    @include m.paddings(48px, 0px, 72px,48px);
+}
+
+.build-path-title{
+    @include m.text-character(20px,28px,v.$dark-title-c);
+    @include m.title-character(400, uppercase, center, 24px);
+}
+
+.build-path-subtitle{
+    margin-bottom: 24px;
+    text-align: center;
+    @include m.text-character(16px,26px,v.$dark-title-c);
+}

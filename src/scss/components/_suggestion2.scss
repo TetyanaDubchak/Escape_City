@@ -1,0 +1,35 @@
+@use 'utils/mixins' as m;
+@use 'utils/variables' as v;
+
+
+// Mobile styles
+.suggestion-second {
+    background-color: v.$light-bg-c;
+}
+
+.suggestion-second-container {
+    background-image: url("../../../images/Suggestion/bg-img-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include m.paddings(36px, 30px, 44px, 30px);
+}
+
+// Desktop styles
+@media screen and (min-width: v.$bm) {
+
+    .suggestion-second-container {
+        background-image: url("../../../images/Suggestion/bg-img2-desktop.png");
+        @include m.paddings(60px, 424px, 60px, 424px);
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: v.$bm),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: v.$bm),
+screen and (min-resolution: 192dpi) and (min-width: v.$bm),
+screen and (min-resolution: 2dppx) and (min-width: v.$bm) {
+    .suggestion-second-container{
+        background-image: url('../../../images/Suggestion/bg-img2-desktop@2x.png');
+    }
+}

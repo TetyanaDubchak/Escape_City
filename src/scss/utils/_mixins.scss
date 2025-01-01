@@ -37,3 +37,47 @@
     color: $color;
 }
 
+@mixin more-btn($color){
+    border: 0;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+@mixin more-btn-desk($color-b) {
+    border: 1px solid $color-b;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 35px;
+    padding: 8px 20px 8px 20px;
+    color: $color-b;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
+@mixin title-character($weight, $transf, $pos, $marg) {
+    font-weight: $weight;
+    text-transform: $transf;
+    text-align: $pos;
+    margin-bottom: $marg;
+}
+
+@mixin cut-text($row, $height){
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+    max-height: $height;
+    transition: max-height 0.3s ease;
+}
+
+@mixin cut-text-expanded($height){
+    -webkit-line-clamp: unset;
+    max-height: $height;
+}
