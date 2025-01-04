@@ -239,6 +239,7 @@ const openMobileMenu = document.querySelector('.header-burger-btn');
 const closeMobileMenu = document.querySelector('.header-close-icon');
 const mobileMenu = document.querySelector('.header-menu-wrapper');
 const body = document.body;
+const menuLinks = document.querySelectorAll('.header-menu-wrapper a');
 
 const toggleMenu = () => {
     const isMenuOpen = openMobileMenu.getAttribute('aria-expanded') === 'true' || false;
@@ -251,6 +252,14 @@ const toggleMenu = () => {
       bodyUnLock();
     }
 };
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-open');
+        openMobileMenu.setAttribute('aria-expanded', false);
+        bodyUnLock();
+    });
+});
   
 openMobileMenu.addEventListener('click', toggleMenu);
 closeMobileMenu.addEventListener('click', toggleMenu);

@@ -33,6 +33,13 @@
 
 .about-btn{
     @include m.more-btn(v.$gold-t-c);
+    transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+
+    &:hover,
+    &:focus{
+        border-color: v.$btn-more-hover;
+        color: v.$btn-more-hover;
+    }
 }
 
 // Desktop styles

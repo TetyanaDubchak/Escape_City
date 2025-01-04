@@ -1,10 +1,10 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
-<symbol id="icon-arrow-left" viewBox="0 0 32 32">
+<symbol id="icon-arrow-left-yellow" viewBox="0 0 32 32">
 <path fill="#c1945d" style="fill: var(--color1, #c1945d)" d="M31.933 0.44h-31.536v31.536h31.536v-31.536z"></path>
 <path fill="#fff" style="fill: var(--color2, #fff)" d="M26.779 16.208l-1.339 1.339-1.339-1.339 1.339-1.339 1.339 1.339zM6.889 16.208l2.319-1.339v2.678l-2.319-1.339zM25.44 16.44h-16.464v-0.464h16.464v0.464z"></path>
 </symbol>
-<symbol id="icon-arrow-right" viewBox="0 0 32 32">
+<symbol id="icon-arrow-right-yellow" viewBox="0 0 32 32">
 <path fill="#c1945d" style="fill: var(--color1, #c1945d)" d="M0.397 0.44h31.536v31.536h-31.536v-31.536z"></path>
 <path fill="#fff" style="fill: var(--color2, #fff)" d="M5.551 16.208l1.339 1.339 1.339-1.339-1.339-1.339-1.339 1.339zM25.44 16.208l-2.319-1.339v2.678l2.319-1.339zM6.889 16.44h16.464v-0.464h-16.464v0.464z"></path>
 </symbol>

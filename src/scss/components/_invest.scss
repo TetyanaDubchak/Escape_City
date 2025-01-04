@@ -21,15 +21,50 @@
 .invest-picure-item{
     max-width: 300px;
     margin-right: 12px;
+    min-height: 495px;
+    
 }
 
 .invest-picure{
-    margin-bottom: 12px;
+    min-height: 495px;
 }
 
 .invest-picture-title{
     @include m.text-character(20px,35px,v.$dark-text-c);
     text-align: center;
+}
+
+.invest-overlay-wrapper{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 12px;
+    width: 100%;
+    height: 100%;
+}
+
+.invest-overlay{
+    position: absolute;
+    @include m.paddings(12px,20px,12px,20px);
+    @include m.size(100%,100%);
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    transform: translate(100%, 0);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #000000B2;
+}
+
+.invest-picture-item:hover .invest-overlay,
+.invest-picture-item:focus .invest-overlay{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.invest-overlay-text{
+    @include m.text-character(10px,18px,v.$light-c-t);
+    &>span{
+        color: v.$gold-t-c;
+    }
 }
 
 @media screen and (max-width: 1919px) {
@@ -57,10 +92,10 @@
     .invest-container {
         padding: 0;
         position: relative;
-        min-height: 700px;
+        min-height: 750px;
         
         &.expanded{
-            min-height: 1600px;
+            min-height: 1980px;
             transition: min-height 0.5s ease-in-out;
         }
     }
@@ -106,6 +141,12 @@
         background-color: v.$btn-bg-c;
         @include m.text-character(16px,34px,v.$light-c-t);
         max-width: 226px;
-
+        transition: background-color 0.5s ease-in-out;
+        
+            &:hover,
+            &:focus {
+                background-color: v.$btn-bg-hover;
+            }
     }
+
 }

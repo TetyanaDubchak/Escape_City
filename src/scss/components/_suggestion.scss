@@ -93,6 +93,13 @@
     width: 100%;
     @include m.border(1px,solid, v.$btn-bord-c);
     background-color: v.$btn-bg-c;
+
+    transition: background-color 0.5s ease-in-out;
+
+    &:hover,
+    &:focus{
+        background-color: v.$btn-bg-hover;
+    }
 }
 
 .suggestion-text-info{
@@ -167,6 +174,7 @@ screen and (min-resolution: 2dppx) {
     font-weight: 300;
     line-height: 34px;
     max-width: 226px;
+    min-height: 50px;
 }
 
 .suggestion-text-info {

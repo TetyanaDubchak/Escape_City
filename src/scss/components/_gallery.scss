@@ -36,7 +36,22 @@
 
     &>p{
         color: v.$gold-t-c;
+        transition: color 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+            color: v.$btn-more-hover;
+            }
     }
+
+    transition: color 0.3s ease-in-out, border-color 0.5s ease-in-out;
+
+    &:hover,
+    &:focus{
+        border-color: v.$btn-more-hover;
+        color: v.$btn-more-hover;
+        
+    }
+
 }
 
 .swiper-gallery .swiper-slide{
@@ -92,10 +107,18 @@
         padding: 0 !important;
         border-color: transparent;
         @include m.size(68px,68px);
+
         &::after{
             content: '';
         }
         left: 320px;
+
+        transition: fill 0.3s ease-in-out;
+        &>svg:hover,
+        &>svg:focus{
+            fill: #EFDDD2;
+        }
+
     }
 
     .gallery-button-next{
@@ -108,6 +131,7 @@
             content: '';
         }
         right: 320px;
+
     }
 }
 

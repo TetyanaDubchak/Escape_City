@@ -43,12 +43,25 @@
     max-width: 222px;
     margin-left: auto;
     margin-right: auto;
+    transition: border-color 0.5s ease-in-out;
+    
+        &:hover,
+        &:focus {
+            border-color: v.$btn-more-hover;
+        }
 }
 
 .apartment-more-btn{
     font-weight: 400;
     @include m.text-character(14px,24px, v.$gold-t-c);
     text-transform: uppercase;
+
+    transition: color 0.5s ease-in-out;
+    
+        &:hover,
+        &:focus {
+            color: v.$btn-more-hover;
+        }
 }
 
 .swiper-apartment-plan .swiper-slide {
