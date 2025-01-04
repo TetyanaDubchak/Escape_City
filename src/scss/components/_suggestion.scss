@@ -8,7 +8,7 @@
 }
 
 .suggestion-container{
-    background-image: url("../../../images/Suggestion/bg-img-mobile.jpg");
+    background-image: url("../.././images/Suggestion/bg-img-mobile.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -113,7 +113,7 @@ screen and (-webkit-min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
     .hero-contauner {
-        background-image: url('../../../images/Suggestion/bg-img-mobile@2x.jpg');
+        background-image: url('../.././images/Suggestion/bg-img-mobile@2x.jpg');
     }
 }
 
@@ -122,7 +122,7 @@ screen and (min-resolution: 2dppx) {
 @media screen and (min-width: v.$bm){
 
 .suggestion-container {
-    background-image: url("../../../images/Suggestion/bg-img-desktop.png");
+    background-image: url("../.././images/Suggestion/bg-img-desktop.png");
     @include m.paddings(118px, 426px, 118px, 426px);
 }
 
@@ -190,6 +190,6 @@ screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: v.$bm),
 screen and (min-resolution: 192dpi) and (min-width: v.$bm),
 screen and (min-resolution: 2dppx) and (min-width: v.$bm) {
     .suggestion-container{
-        background-image: url('../../../images/Suggestion/bg-img-desktop@2x.png');
+        background-image: url('../.././images/Suggestion/bg-img-desktop@2x.png');
     }
 }
