@@ -1,8 +1,9 @@
 @use 'utils/mixins' as m;
 @use 'utils/variables' as v;
 
+// Mobile styles
 .build-path-container{
-    @include m.paddings(48px, 0px, 72px,48px);
+    @include m.paddings(48px, 0px, 72px,0px);
 }
 
 .build-path-title{
@@ -15,3 +16,69 @@
     text-align: center;
     @include m.text-character(16px,26px,v.$dark-title-c);
 }
+
+.swiper-build-path .swiper-slide {
+    transform: scale(0.9) !important;
+    transition: transform 0.3s !important;
+};
+
+.swiper-build-path .swiper-slide-active {
+    transform: scale(1) !important;
+}
+
+@media screen and (max-width: v.$max-mob-m) {
+    .gallery-button-prev {
+        @include m.visually-hidden
+    };
+
+    .gallery-button-next {
+        @include m.visually-hidden
+    }
+}
+
+
+// Desktop styles
+
+@media screen and (min-width: v.$bm){
+    .build-path-container {
+        @include m.paddings(160px, 0px, 196px, 0px);
+    }
+    
+    .build-path-title {
+        font-size: 36px;
+        line-height: 35px;
+        @include m.title-character(300, none, center, 48px);
+    }
+    
+    .build-path-subtitle {
+        margin-bottom: 20px;
+        line-height: 34px;
+    }
+
+    .build-path-button-prev {
+        background-color: transparent !important;
+        padding: 0 !important;
+        border-color: transparent;
+        @include m.size(68px, 68px);
+    
+        &::after {
+            content: '';
+        }
+    
+        left: 320px;
+        }
+    
+    .build-path-button-next {
+        background-color: transparent !important;
+        padding: 0 !important;
+        border-color: transparent;
+         @include m.size(68px, 68px);
+    
+        &::after {
+            content: '';
+        }
+    
+        right: 320px;
+        }
+}
+

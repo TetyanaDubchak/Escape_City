@@ -54,6 +54,8 @@
 }
 
 .location-map-wrapper{
+    display: flex;
+    align-items: center;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -68,7 +70,7 @@
 
 .location-map {
     @include m.size(542px, 530px);
-   align-self: center;
+
 }
 
 .location-title{

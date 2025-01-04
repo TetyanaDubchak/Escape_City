@@ -50,23 +50,23 @@
             <div class="header-desc-wrapper">
               <nav>
                 <ul class="header-decktop-nav-list">
-                  <li><a class="header-decktop-nav-link" href="">Про комплекс</a></li>
-                  <li><a class="header-decktop-nav-link" href="">Галерея</a></li>
-                  <li><a class="header-decktop-nav-link" href="">Ген-план</a></li>
-                  <li><a class="header-decktop-nav-link" href="">Хід Будівництва</a></li>
-                  <li><a class="header-decktop-nav-link" href="">Апартаменти</a></li>
-                  <li><a class="header-decktop-nav-link" href="">Контакти</a></li>
+                  <li><a class="header-decktop-nav-link" href="#about">Про комплекс</a></li>
+                  <li><a class="header-decktop-nav-link" href="#gallery">Галерея</a></li>
+                  <li><a class="header-decktop-nav-link" href="#plan">Ген-план</a></li>
+                  <li><a class="header-decktop-nav-link" href="#builder">Хід Будівництва</a></li>
+                  <li><a class="header-decktop-nav-link" href="#apartments">Апартаменти</a></li>
+                  <li><a class="header-decktop-nav-link" href="#contacts">Контакти</a></li>
                 </ul>
               </nav>
               <div>
                 <ul class="header-decktop-social-list">
                   <li>
                     <a
-                      href=""
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                     >
-                      <svg width="47" height="47">
+                      <svg class="header-social-icon" width="47" height="47">
                         <use
                           href="./images/SVG/symbol-defs.svg#icon-facebook"
                         ></use>
@@ -75,11 +75,11 @@
                   </li>
                   <li>
                     <a
-                      href=""
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                     >
-                      <svg width="47" height="47">
+                      <svg class="header-social-icon" width="47" height="47">
                         <use
                           href="./images/SVG/symbol-defs.svg#icon-instagram"
                         ></use>
@@ -92,7 +92,7 @@
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                     >
-                      <svg width="47" height="47">
+                      <svg class="header-social-icon" width="47" height="47">
                         <use
                           href="./images/SVG/symbol-defs.svg#icon-youTube"
                         ></use>
@@ -106,31 +106,32 @@
 
           <!--Mobile Menu-->
           <div class=" container header-menu-wrapper">
-            <a href="./index.html"
+            <div class="header-menu-top-wrapper">
+                <a href="./index.html"
               ><picture>
                   <source srcset="./images/Header/logo-mobile.png 1x,
                   ./images/Header/logo-mobile@2x.png 2x" media="(max-width: 1919px)"/>
-                  <img src="./images/Header/logo-mobile.png" alt="logotype"
+                  <img class="header-menu-logo" src="./images/Header/logo-mobile.png" alt="logotype"
               />
                 </picture></a>
               <button type="button" class="header-close-btn">
                 <svg width="20" height="20" class="header-close-icon">
                   <use href="./images/SVG/symbol-defs.svg#icon-close"></use>
                 </svg>              
-              </button>
-
-            <nav>
-              <ul>
-                <li><a href="">Про комплекс</a></li>
-                <li><a href="">Галерея</a></li>
-                <li><a href="">Ген-план</a></li>
-                <li><a href="">Хід Будівництва</a></li>
-                <li><a href="">Апартаменти</a></li>
-                <li><a href="">Контакти</a></li>
+              </button>          
+            </div>
+            <nav class="header-menu-nav">
+              <ul class="header-menu-list">
+                <li class="header-menu-item"><a class="header-menu-link" href="#about">Про комплекс</a></li>
+                <li class="header-menu-item"><a class="header-menu-link" href="#gallery">Галерея</a></li>
+                <li class="header-menu-item"><a class="header-menu-link" href="#plan">Ген-план</a></li>
+                <li class="header-menu-item"><a class="header-menu-link" href="#builder">Хід Будівництва</a></li>
+                <li class="header-menu-item"><a class="header-menu-link" href="#apartments">Апартаменти</a></li>
+                <li class="header-menu-item"><a class="header-menu-link" href="#contacts">Контакти</a></li>
               </ul>
             </nav>
-            <div>
-              <ul>
+            <div class="header-menu-social-wrap">
+              <ul class="header-menu-social-list">
                 <li>
                   <a href="#" target="_blank" rel="noopener noreferrer nofollow">
                     <svg width="47" height="47">
@@ -141,7 +142,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="" target="_blank" rel="noopener noreferrer nofollow">
+                  <a href="#" target="_blank" rel="noopener noreferrer nofollow">
                     <svg width="47" height="47">
                       <use
                         href="./images/SVG/symbol-defs.svg#icon-instagram"
@@ -150,7 +151,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="" target="_blank" rel="noopener noreferrer nofollow">
+                  <a href="#" target="_blank" rel="noopener noreferrer nofollow">
                     <svg width="47" height="47">
                       <use
                         href="./images/SVG/symbol-defs.svg#icon-youTube"
@@ -206,7 +207,7 @@
 
       <!-- About -->
       <section class="about">
-        <div class="container about-container">
+        <div class="container about-container" id="about">
           <h2 class="about-title">Про комплекс</h2>
           <p class="about-text"> 
             <span>ESCAPE City – нове місто на карті Bukovel площею 8 Га</span>, з унікальною архітектурою та дизайном, над яким більше року працювали кращі архітектурні компанії світу. Масштаб проекту вражає сміливістю, гармонійним поєднанням природи, екологічності, етнічності з технологіями та найновітнішими технічними рішеннями щодо будівництва преміального житла. «Місто втечі». Саме втекти від буденності, турбот, проблем, а інколи і реалії хочеться всім без виключення жителям міст. <br/> 
@@ -222,11 +223,11 @@
 
       <!-- Gallery -->
       <section>
-        <div class="container gallery-container">
+        <div class="container gallery-container" id="gallery">
           <h2 class="gallery-title">Галерея</h2>
           <div class="swiper swiper-gallery">
           <ul class="swiper-wrapper">
-            <li class="swiper-slide">
+            <li class="swiper-slide gallery-item">
               <picture>
                   <source
                   srcset="./images/Gallery/img1.png 1x,
@@ -235,35 +236,35 @@
               />
                 </picture>
             </li>
-            <li class="swiper-slide"><picture>
+            <li class="swiper-slide gallery-item"><picture>
                   <source
                   srcset="./images/Gallery/img2.png 1x,
                   ./images/Gallery/img2@2x.png 2x"/>
                   <img src="./images/Gallery/img2.png" alt="apartment"
               />
                 </picture></li>
-            <li class="swiper-slide"><picture>
+            <li class="swiper-slide gallery-item"><picture>
                   <source
                   srcset="./images/Gallery/img3.png 1x,
                   ./images/Gallery/img3@2x.png 2x"/>
                   <img src="./images/Gallery/img3.png" alt="apartment"
               />
                 </picture></li>
-            <li class="swiper-slide"><picture>
+            <li class="swiper-slide gallery-item"><picture>
                   <source
                   srcset="./images/Gallery/img4.png 1x,
                   ./images/Gallery/img4@2x.png 2x"/>
                   <img src="./images/Gallery/img4.png" alt="apartment"
               />
                 </picture></li>
-            <li class="swiper-slide"><picture>
+            <li class="swiper-slide gallery-item"><picture>
                   <source
                   srcset="./images/Gallery/img5.png 1x,
                   ./images/Gallery/img5@2x.png 2x"/>
                   <img src="./images/Gallery/img5.png" alt="apartment"
               />
                 </picture></li>
-                <li class="swiper-slide"><picture>
+                <li class="swiper-slide gallery-item"><picture>
                   <source
                   srcset="./images/Gallery/img6.png 1x,
                   ./images/Gallery/img6@2x.png 2x"/>
@@ -291,7 +292,7 @@
 
       <!-- Location -->
       <section>
-        <div class="container location-container">
+        <div class="container location-container" id="plan">
           <h2 class="location-title">Розташування та оточення</h2>
           <div class="location-map-wrapper">
             <picture>
@@ -536,7 +537,7 @@
 
       <!-- About builder -->
       <section class="builder">
-        <div class="container builder-container">
+        <div class="container builder-container" >
           <h2 class="builder-title">Про забудовника</h2>
           <div class="builder-content-wrapper">
               <div class="builder-logo-wrapper">
@@ -584,9 +585,9 @@
             <h2 class="invest-title">Чому варто інвестувати в <span>Ескейп сіті</span> </h2>
           </div>
             
-            <div class="swiper">
+            <div class="swiper swiper-invest">
               <ul class="swiper-wrapper invest-list">
-                <li class="swiper-slide invest-picure-item">
+                <li class="swiper-slide invest-picture-item">
                   <picture>
                   <source
                   srcset="./images/Invest/img1.png 1x,
@@ -596,7 +597,7 @@
                 </picture>
                   <p class="invest-picture-title">Локація</p>
                 </li>
-                <li class="swiper-slide invest-picure-item">
+                <li class="swiper-slide invest-picture-item">
                    <picture>
                   <source
                   srcset="./images/Invest/img2.png 1x,
@@ -606,7 +607,7 @@
                 </picture>
                   <p class="invest-picture-title">Екологічність</p>
                 </li>
-                <li class="swiper-slide invest-picure-item">
+                <li class="swiper-slide invest-picture-item">
                   <picture>
                   <source
                   srcset="./images/Invest/img3.png 1x,
@@ -616,6 +617,66 @@
                 </picture>
                   <p class="invest-picture-title">Інфраструктура</p>
                 </li>
+               <li class="swiper-slide invest-picture-item hidden">
+                  <picture>
+                  <source
+                  srcset="./images/Invest/img4.png 1x,
+                  ./images/Invest/img4@2x.png 2x"/>
+                  <img class="invest-picure" src="./images/Invest/img4.png" alt="build"
+              />
+                </picture>
+                  <p class="invest-picture-title">Архітектура та будівництво</p>
+                </li>
+               <li class="swiper-slide invest-picture-item hidden">
+                  <picture>
+                  <source
+                  srcset="./images/Invest/img5.png 1x,
+                  ./images/Invest/img5@2x.png 2x"/>
+                  <img class="invest-picure" src="./images/Invest/img5.png" alt="build"
+              />
+                </picture>
+                  <p class="invest-picture-title">Комʼюніті</p>
+                </li> 
+                <li class="swiper-slide invest-picture-item hidden">
+                  <picture>
+                  <source
+                  srcset="./images/Invest/img6.png 1x,
+                  ./images/Invest/img6@2x.png 2x"/>
+                  <img class="invest-picure" src="./images/Invest/img6.png" alt="build"
+              />
+                </picture>
+                  <p class="invest-picture-title">Капіталізація</p>
+                </li>
+                <li class="swiper-slide invest-picture-item hidden">
+                  <picture>
+                  <source
+                  srcset="./images/Invest/img7.png 1x,
+                  ./images/Invest/img7@2x.png 2x"/>
+                  <img class="invest-picure" src="./images/Invest/img7.png" alt="build"
+              />
+                </picture>
+                  <p class="invest-picture-title">Простір для розваг та спорту</p>
+                </li> 
+                <li class="swiper-slide invest-picture-item hidden">
+                  <picture>
+                  <source
+                  srcset="./images/Invest/img8.png 1x,
+                  ./images/Invest/img8@2x.png 2x"/>
+                  <img class="invest-picure" src="./images/Invest/img8.png" alt="build"
+              />
+                </picture>
+                  <p class="invest-picture-title">Безпека</p>
+                </li> 
+                <li class="swiper-slide invest-picture-item hidden">
+                  <picture>
+                  <source
+                  srcset="./images/Invest/img9.png 1x,
+                  ./images/Invest/img9@2x.png 2x"/>
+                  <img class="invest-picure" src="./images/Invest/img9.png" alt="build"
+              />
+                </picture>
+                  <p class="invest-picture-title">Простір Для Дітей</p>
+                </li>             
               </ul>              
             </div>
 
@@ -657,10 +718,10 @@
 
       <!-- Builder path-->
       <section>
-        <div class="container build-path-container">
+        <div class="container build-path-container" id="builder">
           <h2 class="build-path-title">Хід будівництва</h2>
           <p class="build-path-subtitle">Вересень 2023</p>
-          <div class="swiper">
+          <div class="swiper swiper-build-path">
             <ul class="swiper-wrapper">
               <li class="swiper-slide build-path-item">
                 <picture>
@@ -707,7 +768,13 @@
               />
                 </picture>
               </li>
-            </ul>            
+            </ul>
+              <button class="swiper-button-prev build-path-button-prev">
+                <img src="./images/BuilderPath/arrow-left.png" alt="button">
+              </button>
+              <button class="swiper-button-next build-path-button-next">
+                <img src="./images/BuilderPath/arrow-right.png" alt="button">
+                </button>            
           </div>
 
         </div>
@@ -716,11 +783,11 @@
 
       <!-- Choose apartment-->
       <section class="apartment">
-        <div class="container apartment-container">
+        <div class="container apartment-container" id="apartments">
           <div class="apartment-title-wrapper">
             <h2 class="apartment-title">Оберіть свої апартаменти</h2>
           </div>
-          <div class="swiper apartment-list-wrapper">
+          <div class="swiper swiper-apartment-list">
             <ul class="swiper-wrapper">
             <li class="swiper-slide apartment-list-item"><a class="apartment-list-link" href="#">Студія від 23м2</a></li>
             <li class="swiper-slide apartment-list-item"><a class="apartment-list-link" href="#">Студія від 23м2</a></li>
@@ -729,7 +796,7 @@
             <li class="swiper-slide apartment-list-item"><a class="apartment-list-link" href="#">Індивідуальне 50м2+</a></li>
           </ul>          
           </div>
-          <div class="swiper">
+          <div class="swiper swiper-apartment-plan">
             <ul class="swiper-wrapper">
             <li class="swiper-slide">
               <picture>
@@ -738,7 +805,7 @@
                   ./images/ChooseApartment/apartment1-desktop@2x.png 2x" media="(min-width: 1920px)"/>
                   <source srcset="./images/ChooseApartment/apartment1-mobile.png 1x,
                   ./images/ChooseApartment/apartment1-mobile@2x.png 2x" media="(max-width: 1919px)"/>
-                  <img src="./images/ChooseApartment/apartment1-desktop.png" alt="builder's plan"
+                  <img class="apartment-plan" src="./images/ChooseApartment/apartment1-desktop.png" alt="builder's plan"
               />
                 </picture>
             </li>
@@ -749,7 +816,7 @@
                   ./images/ChooseApartment/apartment1-desktop@2x.png 2x" media="(min-width: 1920px)"/>
                   <source srcset="./images/ChooseApartment/apartment1-mobile.png 1x,
                   ./images/ChooseApartment/apartment1-mobile@2x.png 2x" media="(max-width: 1919px)"/>
-                  <img src="./images/ChooseApartment/apartment1-desktop.png" alt="builder's plan"
+                  <img class="apartment-plan" src="./images/ChooseApartment/apartment1-desktop.png" alt="builder's plan"
               />
                 </picture>
             </li>
@@ -760,7 +827,7 @@
                   ./images/ChooseApartment/apartment1-desktop@2x.png 2x" media="(min-width: 1920px)"/>
                   <source srcset="./images/ChooseApartment/apartment1-mobile.png 1x,
                   ./images/ChooseApartment/apartment1-mobile@2x.png 2x" media="(max-width: 1919px)"/>
-                  <img src="./images/ChooseApartment/apartment1-desktop.png" alt="builder's plan"
+                  <img class="apartment-plan" src="./images/ChooseApartment/apartment1-desktop.png" alt="builder's plan"
               />
                 </picture>
             </li>
@@ -771,7 +838,7 @@
                   ./images/ChooseApartment/apartment1-desktop@2x.png 2x" media="(min-width: 1920px)"/>
                   <source srcset="./images/ChooseApartment/apartment1-mobile.png 1x,
                   ./images/ChooseApartment/apartment1-mobile@2x.png 2x" media="(max-width: 1919px)"/>
-                  <img src="./images/ChooseApartment/apartment1-desktop.png" alt="builder's plan"
+                  <img class="apartment-plan" src="./images/ChooseApartment/apartment1-desktop.png" alt="builder's plan"
               />
                 </picture>
             </li>
@@ -782,11 +849,17 @@
                   ./images/ChooseApartment/apartment1-desktop@2x.png 2x" media="(min-width: 1920px)"/>
                   <source srcset="./images/ChooseApartment/apartment1-mobile.png 1x,
                   ./images/ChooseApartment/apartment1-mobile@2x.png 2x" media="(max-width: 1919px)"/>
-                  <img src="./images/ChooseApartment/apartment1-desktop.png" alt="builder's plan"
+                  <img class="apartment-plan" src="./images/ChooseApartment/apartment1-desktop.png" alt="builder's plan"
               />
                 </picture>
             </li>
-          </ul>          
+          </ul> 
+              <button class="swiper-button-prev apartment-button-prev">
+                <img src="./images/ChooseApartment/arrow-left.png" alt="button">
+              </button>
+              <button class="swiper-button-next apartment-button-next">
+                <img src="./images/ChooseApartment/arrow-right.png" alt="button">
+                </button>       
           </div>
 
           <div class="apartment-more-btn-wrapper">
@@ -800,8 +873,9 @@
       <!-- Events-->
       <section>
         <div class="container events-container">
-            <h2 class="events-title" >Події</h2>
-            <div class="swiper events-video-wrapper">
+          <div class="events-extra-container">
+          <h2 class="events-title" >Події</h2>
+            <div class="swiper swiper-events">
               <ul class="swiper-wrapper">
               <li class="swiper-slide">
                 <picture>
@@ -810,7 +884,7 @@
                   ./images/Events/events1-desktop@2x.png  2x" media="(min-width: 1920px)"/>
                   <source srcset="./images/Events/events-mobile.png 1x,
                   ./images/Events/events-mobile@2x.png 2x" media="(max-width: 1919px)"/>
-                  <img src="./images/Events/events1-desktop.png" alt="event"
+                  <img class="events-picture" src="./images/Events/events1-desktop.png" alt="event"
               />
                 </picture>
               </li>
@@ -820,7 +894,7 @@
                   ./images/Events/events1-desktop@2x.png  2x" media="(min-width: 1920px)"/>
                   <source srcset="./images/Events/events-mobile.png 1x,
                   ./images/Events/events-mobile@2x.png 2x" media="(max-width: 1919px)"/>
-                  <img src="./images/Events/events1-desktop.png" alt="event"
+                  <img class="events-picture" src="./images/Events/events1-desktop.png" alt="event"
               />
                 </picture></li>
               <li class="swiper-slide"><picture>
@@ -829,10 +903,17 @@
                   ./images/Events/events1-desktop@2x.png  2x" media="(min-width: 1920px)"/>
                   <source srcset="./images/Events/events-mobile.png 1x,
                   ./images/Events/events-mobile@2x.png 2x" media="(max-width: 1919px)"/>
-                  <img src="./images/Events/events1-desktop.png" alt="event"
+                  <img class="events-picture" src="./images/Events/events1-desktop.png" alt="event"
               />
                 </picture></li>
-            </ul>            
+            </ul> 
+              <button class="swiper-button-prev events-button-prev">
+                <img src="./images/Events/arrow-left.png" alt="button">
+              </button>
+              <button class="swiper-button-next events-button-next">
+                <img src="./images/Events/arrow-right.png" alt="button">
+                </button>
+                <div class="swiper-pagination"></div>              
             </div>
 
             <div class="events-text-wrapper">
@@ -843,6 +924,7 @@
               Club, Гуцул-ленд, Аквапарк</span> та ін.
             </p>            
             </div>
+          </div>
 
         </div>
       </section>
@@ -850,16 +932,21 @@
 
       <!-- Offices-->
       <section class="offices">
-        <div class="container offices-container">
+        <div class="container offices-container" id="contacts">
           <h2 class="offices-title">Наше розташування</h2>
-          <div class="offices-list-wrapper swiper">
+          <div class="swiper swiper-offices">
               <ul class="offices-list swiper-wrapper">
               <li class="offices-item swiper-slide">
                 <div class="offices-place-wrapper">
                   <h5 class="offices-place-city">Буковель</h5>
                   <p class="offices-place-area">Івано-Франківська область</p>
                 </div>
-                <img class="offices-picture" src="./images/Offices/Component-1.jpg" alt="employee" />
+                <picture>
+                  <source
+                  srcset="./images/Offices/worker1.png 1x,
+                  ./images/Offices/worker1@2x.png  2x" />
+                  <img class="offices-picture" src="./images/Offices/worker1.png" alt="worker"
+              /></picture>
                 <div class="offices-contact-wrapper">
                   <p class="offices-contact-name">Керівник Дар'я</p>
                   <p class="offices-contact-phone">+380 (63) 623 00</p>
@@ -883,7 +970,12 @@
                 <div class="offices-place-wrapper">
                   <h5 class="offices-place-city">Київ</h5>
                 </div>
-                <img class="offices-picture" src="./images/Offices/Component-2.jpg" alt="employee" />
+                  <picture>
+                  <source
+                  srcset="./images/Offices/worker2.png 1x,
+                  ./images/Offices/worker2@2x.png  2x" />
+                  <img class="offices-picture" src="./images/Offices/worker2.png" alt="worker"
+              /></picture>
                 <div class="offices-contact-wrapper">
                   <p class="offices-contact-name">Керівник Віктор</p>
                   <p class="offices-contact-phone">+380 (93) 5910707</p>
@@ -902,7 +994,12 @@
                 <div class="offices-place-wrapper">
                   <h5 class="offices-place-city">Львів</h5>
                 </div>
-                <img class="offices-picture" src="./images/Offices/Component-3.jpg" alt="employee" />
+                 <picture>
+                  <source
+                  srcset="./images/Offices/worker3.png 1x,
+                  ./images/Offices/worker3@2x.png  2x" />
+                  <img class="offices-picture" src="./images/Offices/worker3.png" alt="worker"
+              /></picture>
                 <div class="offices-contact-wrapper">
                   <p class="offices-contact-name">Керівник Євгенія</p>
                   <p class="offices-contact-phone">+380 (95) 591 07 07</p>
@@ -919,7 +1016,12 @@
                 <div class="offices-place-wrapper">
                   <h5 class="offices-place-city">Дніпро</h5>
                 </div>
-                <img class="offices-picture" src="./images/Offices/Component-4.jpg" alt="employee" />
+                  <picture>
+                  <source
+                  srcset="./images/Offices/worker4.png 1x,
+                  ./images/Offices/worker4@2x.png  2x" />
+                  <img class="offices-picture" src="./images/Offices/worker4.png" alt="worker"
+              /></picture>
                 <div class="offices-contact-wrapper">
                   <p class="offices-contact-name">Керівник Ольга</p>
                   <p class="offices-contact-phone">+380 (50) 5910707</p>

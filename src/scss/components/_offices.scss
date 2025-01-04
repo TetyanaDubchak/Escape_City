@@ -1,6 +1,8 @@
 @use 'utils/mixins' as m;
 @use 'utils/variables' as v;
 
+
+// Mobile styles
 .offices{
     background-color: v.$dark-bg-m-c;
 }
@@ -65,3 +67,72 @@
 }
 
 
+// Desktop styles
+@media screen and (min-width: v.$bm){
+    .offices-container {
+        @include m.paddings(232px, 364px, 112px, 364px);
+    }
+
+    .offices-title {
+        font-size: 36px;
+        line-height: 35px;
+        @include m.title-character(300, none, center, 64px);
+    }
+
+    .offices-list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .offices-item {
+        @include m.paddings(28px, 20px, 66px, 20px);
+        @include m.border(1px, solid, v.$border-off-c);
+        max-width: 290px;
+    }
+
+    .offices-place-wrapper {
+        margin-bottom: 12px;
+        min-height: 52px;
+    }
+
+    .offices-place-city {
+        line-height: 26px;
+        font-weight: 300;
+        margin-bottom: 0px;
+    }
+
+    .offices-place-area {
+        font-size: 13px;
+        line-height: 26px;
+    }
+
+    .offices-picture {
+        margin-bottom: 24px;
+    }
+
+    .offices-contact-wrapper {
+        margin-bottom: 12px;
+    }
+
+    .offices-contact-name {
+        font-weight: 400;
+        margin-bottom: 12px;
+    }
+
+    .offices-contact-phone {
+        font-size: 13px;
+        line-height: 26px;
+    }
+
+    .offices-adress {
+        font-size: 13px;
+        line-height: 26px;
+    }
+
+    .offices-adress-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        min-height: 116px;
+    }
+}

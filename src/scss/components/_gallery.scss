@@ -40,7 +40,7 @@
 }
 
 .swiper-gallery .swiper-slide{
-    transform: scale(0.9)!important;
+    transform: scale(0.95)!important;
     transition: transform 0.3s!important;
 };
 
@@ -49,11 +49,11 @@
 }
 
 @media screen and (max-width: v.$max-mob-m) {
-    .gallery-button-prev {
+    .build-path-button-prev {
             @include m.visually-hidden
         };
     
-    .gallery-button-next {
+    .build-path-button-next {
             @include m.visually-hidden
         }
 }
@@ -61,7 +61,7 @@
 
 @media screen and (min-width: v.$bm){
     .gallery-container {
-        @include m.paddings(80px, 0, 72px, 126px);
+        @include m.paddings(80px, 0, 72px, 0);
     };
 
     .gallery-title {

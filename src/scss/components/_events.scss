@@ -1,6 +1,7 @@
 @use 'utils/mixins' as m;
 @use 'utils/variables' as v;
 
+// Mobile styles
 .events-container{
     @include m.paddings(48px,0px,72px,0px);
 }
@@ -10,7 +11,7 @@
     @include m.title-character(400, uppercase,center, 24px);
 }
 
-.events-video-wrapper{
+.swiper-events{
     margin-bottom: 16px;
 }
 
@@ -25,4 +26,92 @@
     &>span{
         color: v.$gold-t-c;
     }
+}
+
+@media screen and (max-width: v.$max-mob-m) {
+    .events-button-prev {
+        @include m.visually-hidden
+    };
+
+    .events-button-next {
+        @include m.visually-hidden
+    }
+}
+
+// Desktop styles
+@media screen and (min-width: v.$bm){
+    .events-container {
+        @include m.paddings(0px, 0px, 0px, 0px);
+        height: 620px;
+        position: relative;
+    }
+
+    .events-extra-container {
+        max-width: 1370px;
+        position: absolute;
+        top: -84px;
+        left: 275px; 
+        @include m.border(1px,solid,#EFDDD2);
+        @include m.paddings(48px, 88px, 134px, 88px);
+        background-color: v.$light-bg-c;
+    }
+
+    .events-title {
+        @include m.text-character(36px, 35px, v.$dark-title-c);
+        @include m.title-character(300, none, center, 48px);
+    }
+
+    .swiper-events {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+    }
+
+    .events-text-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .events-text {
+        font-size: 16px;
+        line-height: 34px;
+        text-align: center;
+    }
+
+    .events-picture{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-pagination-bullet {
+        margin-top: 22px;
+        @include m.size(12px,12px);
+        background-color: #D9D9D9;
+        opacity: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #424148;
+        }
+
+    .events-button-prev{
+        background-color: transparent !important;
+        padding: 0 !important;
+        border-color: transparent;
+        @include m.size(68px,68px);
+        &::after{
+            content: '';
+        }
+    }
+
+    .events-button-next{
+        background-color: transparent !important;
+        padding: 0 !important;
+        border-color: transparent;
+        @include m.size(68px,68px);
+        &::after{
+            content: '';
+        }
+    }
+
 }

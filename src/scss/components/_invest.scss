@@ -57,25 +57,47 @@
     .invest-container {
         padding: 0;
         position: relative;
-        min-height: 863px;
+        min-height: 700px;
+        
+        &.expanded{
+            min-height: 1600px;
+            transition: min-height 0.5s ease-in-out;
+        }
     }
 
     .invest-content-wrapper{
         position: absolute;
         top: -208px;
-        left: 274px;
+        left: 50%;
+        transform: translateX(-50%);
 
         display: flex;
         flex-direction: column;
         align-items: center;
         @include m.paddings(112px,22px,28px,22px);
         @include m.border(1px,solid,#EFDDD2);
-        min-width: 1370px;
+        max-width: 1370px;
         background-color: v.$light-bg-c;
     }
 
     .invest-list{
         margin-bottom: 48px;
+        display: flex;
+        column-gap: 33px;
+        flex-wrap: wrap;
+        row-gap: 14px;
+    }
+
+    .invest-picture-item{
+        max-width: calc((100% - 66px)/3);
+    }
+
+    .invest-picture-item.hidden {
+        display: none;
+    }
+
+    .invest-picture-title{
+        margin-top: 8px;
     }
 
     .invest-btn{

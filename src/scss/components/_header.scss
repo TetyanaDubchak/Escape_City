@@ -3,10 +3,6 @@
 
 // Mobile styles
 
-// .header-menu-wrapper{
-//     display: none;
-// }
-
 .header{
     background-color: rgba(51, 51, 51, 0.46);
     position: absolute;
@@ -37,8 +33,8 @@
 
 @media screen and (max-width: v.$max-mob-m) {
     .header-desc-wrapper {
-            @include m.visually-hidden;
-        }
+        @include m.visually-hidden;
+    }
 }
 
 
@@ -46,9 +42,9 @@
 .header-menu-wrapper{
     position: fixed;
     top: 0;
+    left: 50%;
     z-index: 1000;
-    
-    height: auto;
+    height: 100%;
     width: 100%;
 
     
@@ -65,13 +61,60 @@
     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: flex;
+    flex-direction: column;
 }
 
 .header-menu-wrapper.is-open {
-    transform: translateX(0);
+    transform: translateX(-50%);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+}
+
+.header-menu-top-wrapper{
+    display: flex;
+    justify-content: space-between;
+    @include m.paddings(20px,21px,14px,22px);
+    border-bottom: 1px solid v.$dark-bg-c;
+}
+
+.header-menu-logo{
+    @include m.size(90px,54px);
+}
+
+.header-close-btn{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.header-menu-nav{
+    @include m.paddings(32px,48px,32px,38px);
+}
+
+.header-menu-item::after{
+    content: '';
+    display: block;
+    @include m.size(288px,1px);
+    background-color: v.$dark-bg-c;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.header-menu-link{
+    @include m.text-character(18px,28px, v.$light-c-t);
+}
+
+.header-menu-social-wrap{
+    @include m.paddings(40px, 96px, 27px, 96px);
+    border-top: 1px solid v.$dark-bg-c;
+    margin-top: auto;
+}
+
+.header-menu-social-list{
+    display: flex;
+    justify-content: space-between;
 }
 
 // Desktop styles
