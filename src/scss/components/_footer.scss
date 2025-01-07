@@ -109,7 +109,7 @@
 
 // Desktop styles
 
-@media screen and (min-width: v.$bm){
+@media screen and (min-width: v.$desk-5-m){
 
     .footer-first-container {
         @include m.paddings(92px, 282px, 165px, 222px);

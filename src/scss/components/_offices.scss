@@ -68,7 +68,7 @@
 
 
 // Desktop styles
-@media screen and (min-width: v.$bm){
+@media screen and (min-width: v.$desk-5-m){
     .offices-container {
         @include m.paddings(232px, 364px, 112px, 364px);
     }

@@ -119,7 +119,7 @@ screen and (min-resolution: 2dppx) {
 
 // Desktop styles
 
-@media screen and (min-width: v.$bm){
+@media screen and (min-width: v.$desk-5-m){
 
 .suggestion-container {
     background-image: url("../.././images/Suggestion/bg-img-desktop.png");
@@ -185,10 +185,10 @@ screen and (min-resolution: 2dppx) {
 
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (min-width: v.$bm),
-screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: v.$bm),
-screen and (min-resolution: 192dpi) and (min-width: v.$bm),
-screen and (min-resolution: 2dppx) and (min-width: v.$bm) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: v.$desk-5-m),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: v.$desk-5-m),
+screen and (min-resolution: 192dpi) and (min-width: v.$desk-5-m),
+screen and (min-resolution: 2dppx) and (min-width: v.$desk-5-m) {
     .suggestion-container{
         background-image: url('../.././images/Suggestion/bg-img-desktop@2x.png');
     }

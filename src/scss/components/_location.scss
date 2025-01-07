@@ -4,7 +4,7 @@
 
 // Mobile styles
 .location-container{
-    @include m.paddings(0, 24px, 74px, 0);
+    @include m.paddings(0, 0px, 72px, 0);
 }
 
 .location-title{
@@ -13,6 +13,9 @@
 };
 
 .location-map-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
     background-image: url(../.././images/Location/base.png);
     background-size: contain;
     display: flex;
@@ -26,6 +29,7 @@
 
 .location-text-wrapper{
     padding-left: 24px;
+    padding-right: 24px;
 }
 
 .location-text{
@@ -53,11 +57,19 @@
     }
 }
 
+@media screen and (min-width: 767px) {
+    .location-text-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 720px;
+    }
+}
+
 // Desktop styles
-@media screen and (min-width: v.$bm){
+@media screen and (min-width: v.$desk-1-m){
 .location-container{
     display: grid;
-    @include m.paddings(56px, 365px, 140px, 166px);
+    @include m.paddings(56px, 50px, 140px, 50px);
 }
 
 .location-map-wrapper{
@@ -69,8 +81,9 @@
     grid-row-end: 3;
     margin-right: 42px;
     margin-bottom: 0;
-    min-width: 736px;
-    min-height: 690px;
+    min-width: 536px;
+    max-height: 690px;
+
     background-size: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -93,7 +106,6 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    min-width: 700px;
     padding-left: 0;
 }
 
@@ -109,14 +121,32 @@
     line-height: 34px;
     @include m.cut-text(6, 238px);
     margin-bottom: 30px;
+    
 }
 
 .location-text.expanded {
-    @include m.cut-text-expanded(620px);
+    @include m.cut-text-expanded(1400px);
 }
+
 
 .location-btn {
     @include m.more-btn-desk(v.$gold-t-c);
 }
 
+}
+
+@media screen and (min-width: v.$desk-3-m){
+.location-container {
+        @include m.paddings(56px, 365px, 140px, 166px);
+    }
+
+.location-map-wrapper {
+    min-width: 736px;
+    min-height: 690px;
+
+    }
+
+.location-text.expanded {
+    @include m.cut-text-expanded(620px);
+}
 }

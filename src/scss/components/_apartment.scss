@@ -84,7 +84,7 @@
 }
 
 // Desktop styles
-@media screen and (min-width: v.$bm){
+@media screen and (min-width: v.$desk-5-m){
     .apartment-container {
         @include m.paddings(160px, 0px, 252px, 0px)
     }
