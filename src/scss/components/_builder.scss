@@ -19,9 +19,9 @@
 
 .builder-logo-wrapper{
     position: relative;
-    z-index: 10;
+    z-index: 9;
     
-    @include m.size(100%, 426px);
+    @include m.size(375px, 426px);
 
     display: flex;
     align-items: flex-end;
@@ -29,11 +29,14 @@
 
     padding-left: 24px;
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .builder-logo-building{
     @include m.size(100px, 314px);
     position: absolute;
+    z-index: 1;
     top: 0;
     right: 0;
 }
@@ -46,6 +49,7 @@
 
 .builder-logo-wrapper::before{
     content: "";
+    z-index: 1;
     display: inline-block;
     @include m.size(298px, 326px);
     @include m.border(1px,solid,v.$gold-t-c);
@@ -67,9 +71,10 @@
     }
 }
 
-@media screen and (max-width: 1919px){
+@media screen and (max-width: v.$max-mob-m){
 .builder-logo-wrapper-extra::before {
         content: "";
+        z-index: 1;
         display: inline-block;
         @include m.size(258px, 24px);
         background-color: v.$dark-bg-c;
@@ -80,6 +85,7 @@
 
 .builder-logo-wrapper::after {
     content: "";
+    z-index: 1;
     display: inline-block;
     @include m.size(78px, 24px);
     background-color: v.$dark-bg-c;
@@ -92,10 +98,10 @@
 
 // Desktop styles
 
-@media screen and (min-width: v.$desk-5-m){
+@media screen and (min-width: v.$desk-1-m){
 
     .builder-container {
-            @include m.paddings(216px, 274px, 366px,274px);
+            @include m.paddings(216px, 60px, 366px,60px);
         }
 
     .builder-title {
@@ -108,18 +114,32 @@
 
     .builder-content-wrapper{
         display: flex;
+        justify-content: center;
         column-gap: 62px;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            z-index: 12;
+            top: 16px;
+            right: 0;
+            background: url(../../../images/AboutBuilder/bg-vd.svg) center no-repeat;
+            background-size: 640px 120px;
+            width: 640px;
+            height: 120px;
+        }
     }
 
     .builder-logo-wrapper::before {
-        @include m.size(428px, 458px);
+        @include m.size(280px, 340px);
         top: 148px;
         left: 140px;
     }
 
     .builder-logo-wrapper {
         display: block;
-        @include m.size(782px, 730px);
+        @include m.size(620px, 730px);
         padding: 0;
         margin: 0;
     }
@@ -129,18 +149,18 @@
     }
 
     .builder-logo-building {
-        @include m.size(380px, 512px);
+        @include m.size(300px, 420px);
         top: 218px;
     }
 
     .builder-logo {     
-        @include m.size(377px, 515px);
+        @include m.size(300px, 420px);
     }
 
     .builder-text-wrapper {
         padding:0;
-        max-width: 528px;
-        padding-top: 294px;
+        max-width: 320px;
+        padding-top: 120px;
     }
 
     .builder-text {
@@ -149,3 +169,45 @@
         
     }
 }
+
+@media screen and (min-width: v.$desk-3-m) {
+    .builder-logo-wrapper {
+        @include m.size(782px, 730px);
+    }
+
+    .builder-logo-building {
+        @include m.size(380px, 512px);
+        top: 218px;
+    }
+
+    .builder-logo {
+        @include m.size(377px, 515px);
+    }
+
+    .builder-logo-wrapper::before {
+        @include m.size(428px, 458px);
+        top: 148px;
+        left: 140px;
+    }
+
+    .builder-text-wrapper {
+        padding: 0;
+        max-width: 528px;
+        padding-top: 294px;
+    }
+
+        .builder-content-wrapper::before{
+            top: 100px;
+            right: 0;
+            background-size: 740px 120px;
+            width: 740px;
+            height: 120px;
+        }
+    }
+
+
+@media screen and (min-width: v.$desk-4-m){
+
+    .builder-container {
+        @include m.paddings(216px, 274px, 366px, 274px);
+    }}

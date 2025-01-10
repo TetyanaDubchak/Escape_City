@@ -17,16 +17,19 @@
     @include m.text-character(16px,26px,v.$dark-title-c);
 }
 
-.swiper-build-path .swiper-slide {
-    transform: scale(0.9) !important;
-    transition: transform 0.3s !important;
-};
+.build-path-item {
+    width: 330px;
+    height: 430px;
+    overflow: hidden;
 
-.swiper-build-path .swiper-slide-active {
-    transform: scale(1) !important;
+    & img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
 }
 
-@media screen and (max-width: v.$max-mob-m) {
+@media screen and (max-width: 1198px) {
     .gallery-button-prev {
         @include m.visually-hidden
     };
@@ -39,9 +42,70 @@
 
 // Desktop styles
 
-@media screen and (min-width: v.$desk-5-m){
+@media screen and (min-width: v.$desk-1-m){
     .build-path-container {
         @include m.paddings(160px, 0px, 196px, 0px);
+        position: relative;
+    }
+
+    .build-decor-1{
+        
+        &::before{
+            position: absolute;
+            left: 40px;
+            top: 20%;
+            display: inline-block;
+            content: "";
+            width: 32%;
+            height: 62%;
+            background-color: #F8F8F8;
+            transform:perspective(1000px) rotateY(12deg);
+            transform-origin: right center;
+        }
+
+        &::after{
+            position: absolute;
+            right: 40px;
+            top: 20%;
+            display: inline-block;
+            content: "";
+            width: 32%;
+            height: 62%;
+            background-color: #F8F8F8;
+            transform:perspective(1000px) rotateY(-12deg);
+            transform-origin: left center;
+        }
+    }
+
+    .build-decor-2{
+        &::before{
+            position: absolute;
+            left: 55px;
+            top: 18%;
+            display: inline-block;
+            content: "";
+            width: 32%;
+            height: 66%;
+            @include m.border(1px, solid, #EDF0ED);
+            background-color: transparent;
+            transform:perspective(1000px) rotateY(12deg);
+            transform-origin: right center;
+        }
+
+        &::after{
+            position: absolute;
+            right: 55px;
+            top: 18%;
+            display: inline-block;
+            content: "";
+            width: 32%;
+            height: 66%;
+            @include m.border(1px,solid,#EDF0ED);
+            background-color: transparent;
+            transform:perspective(1000px) rotateY(-12deg);
+            transform-origin: left center;
+        }
+        
     }
     
     .build-path-title {
@@ -55,30 +119,40 @@
         line-height: 34px;
     }
 
-    .build-path-button-prev {
-        background-color: transparent !important;
+    .build-path-button-prev{
+        background-color: v.$gold-t-c;
+        padding: 0 !important;
+        border-color: transparent;
+        @include m.size(68px,68px);
+
+        &::after{
+            content: '';
+        }
+        left: 320px;
+
+        transition: background-color 0.3s ease-out;
+        &:hover,
+        &:focus{
+            background-color: #EFDDD2;
+        }
+
+    }
+
+    .build-path-button-next{
         padding: 0 !important;
         border-color: transparent;
         @include m.size(68px, 68px);
-    
+        background-color: v.$gold-t-c;
         &::after {
             content: '';
         }
-    
-        left: 320px;
-        }
-    
-    .build-path-button-next {
-        background-color: transparent !important;
-        padding: 0 !important;
-        border-color: transparent;
-         @include m.size(68px, 68px);
-    
-        &::after {
-            content: '';
-        }
-    
         right: 320px;
+        transition: background-color 0.3s ease-out;
+        &:hover,
+        &:focus{
+            background-color: #EFDDD2;
         }
+
+    }
 }
 

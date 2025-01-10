@@ -18,7 +18,11 @@
 
 .suggestion-form-wrapper{
     background-color:  #FFFFFF38;
+    backdrop-filter: blur(2.9px);
     @include m.paddings(30px, 20px,18px,20px);
+    max-width: 315px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .suggestion-form{
@@ -117,18 +121,25 @@ screen and (min-resolution: 2dppx) {
     }
 }
 
+@media screen and (min-width: v.$tablet-m) {
+    .suggestion-container {
+        background-size: cover;
+        background-position: top;
+    }}
+
 // Desktop styles
 
-@media screen and (min-width: v.$desk-5-m){
+@media screen and (min-width: v.$desk-1-m){
 
 .suggestion-container {
     background-image: url("../.././images/Suggestion/bg-img-desktop.png");
-    @include m.paddings(118px, 426px, 118px, 426px);
+    @include m.paddings(118px, 0, 118px, 0);
 }
 
 .suggestion-form-wrapper{
     background-color: #FFFFFF24;
     @include m.paddings(22px, 68px, 12px, 68px);
+    min-width: 954px;
 }
 
 .suggestion-form {
@@ -185,10 +196,17 @@ screen and (min-resolution: 2dppx) {
 
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (min-width: v.$desk-5-m),
-screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: v.$desk-5-m),
-screen and (min-resolution: 192dpi) and (min-width: v.$desk-5-m),
-screen and (min-resolution: 2dppx) and (min-width: v.$desk-5-m) {
+@media screen and (min-width: v.$desk-4-m) {
+
+    .suggestion-container {
+        @include m.paddings(118px, 426px, 118px, 426px);
+    }}
+
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: v.$desk-1-m),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: v.$desk-1-m),
+screen and (min-resolution: 192dpi) and (min-width: v.$desk-1-m),
+screen and (min-resolution: 2dppx) and (min-width: v.$desk-1-m) {
     .suggestion-container{
         background-image: url('../.././images/Suggestion/bg-img-desktop@2x.png');
     }

@@ -19,6 +19,11 @@
 .offices-item{
     @include m.paddings(24px,18px,24px,18px);
     @include m.border(1px,solid,v.$border-off-c);
+    max-width: 315px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .offices-place-wrapper{
@@ -58,19 +63,42 @@
 .offices-adress{
     @include m.text-character(12px,20px, v.$gold-t-c);
     text-decoration: underline;
+
+    &::before{
+        content: "";
+        display: inline-block;
+        background: url(../../../images/Offices/location-pin.svg) center no-repeat;
+        margin-bottom: -3px;
+        @include m.size(24px,24px);
+    }
+}
+
+.offices-adress:not(:last-child):after{
+    content: "";
+    display: inline-block;
+    width: 250px;
+    height: 1px;
+    background-color: v.$dark-bg-c;
+
 }
 
 .offices-adress-wrapper{
     display: flex;
     flex-wrap: wrap;
-    min-height: 112px;
+    min-height: 120px;
 }
 
 
 // Desktop styles
-@media screen and (min-width: v.$desk-5-m){
+
+@media screen and (min-width: v.$desk-1-m) {
+    .offices-container{
+        padding-top: 120px;
+    }
+}
+@media screen and (min-width: v.$desk-2-m){
     .offices-container {
-        @include m.paddings(232px, 364px, 112px, 364px);
+        @include m.paddings(232px, 60px, 112px, 60px);
     }
 
     .offices-title {
@@ -82,6 +110,9 @@
     .offices-list{
         display: flex;
         justify-content: space-between;
+        max-width: 1196px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .offices-item {
@@ -133,6 +164,11 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        min-height: 116px;
+        min-height: 144px;
     }
 }
+
+@media screen and (min-width: v.$desk-5-m) {
+    .offices-container {
+        @include m.paddings(232px, 364px, 112px, 364px);
+    }}

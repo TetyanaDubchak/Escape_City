@@ -1,0 +1,146 @@
+@use 'utils/mixins' as m;
+@use 'utils/variables' as v;
+
+.suggestion-modal{
+    position: relative;
+    max-width: 420px;
+    max-height: auto;
+    @include m.paddings(76px,70px,60px,70px);
+    
+    background-color: v.$dark-title-c;
+    
+    &::before{
+        content: "";
+        display: inline-block;
+        @include m.size(400px, 32px);
+        background-color: v.$dark-text-c;
+
+        position: absolute;
+        top: 155px;
+        left: 0;
+    }
+
+    &::after{
+        content: "";
+        display: inline-block;
+        @include m.size(32px, 404px);
+        background-color: v.$dark-text-c;
+
+        position: absolute;
+        top: 155px;
+        right: 21px;
+    }
+}
+
+.backdrop.is-hidden {
+    display: none;
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-suggestion-close-btn{
+    border-color: transparent;
+    background-color:transparent ;
+    position: absolute;
+    top: 0;
+    right: -40px;
+}
+
+.modal-suggestion-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.modal-suggestion-form-title {
+    @include m.text-character(16px, 35px, v.$light-c-t);
+    @include m.title-character(500, uppercase, center, 62px)
+}
+
+.modal-suggestion-form-text{
+    @include m.border(1px, solid, #777584);
+    @include m.paddings(12px, 20px, 12px, 20px);
+    background-color: v.$dark-text-c;
+    @include m.text-character(14px, 26px, v.$neutral-t-c);
+    width: 280px;
+    height: 50px;
+
+    &::placeholder {
+        color: v.$neutral-t-c;
+    }
+}
+
+.modal-suggestion-form-phone {
+    @include m.border(1px, solid, #777584);
+    @include m.paddings(20px, 12px, 20px, 98px);
+    @include m.text-character(14px, 26px, v.$neutral-t-c);
+    background-color: v.$dark-text-c;
+    font-weight: 300;
+
+    width: 280px;
+    height: 50px;
+
+    &::placeholder {
+        color: v.$neutral-t-c;
+        
+    }
+}
+
+.modal-suggestion-form-phone-main {
+    position: relative;
+}
+
+.modal-suggestion-form-phone-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    margin-right: 1px;
+}
+
+.modal-suggestion-form-phone-text {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+
+    font-weight: 300;
+    @include m.text-character(14px, 50px, v.$light-c-t);
+}
+
+.modal-suggestion-form-btn {
+    font-weight: 300;
+    @include m.text-character(14px, 26px, v.$light-c-t);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    width: 280px;
+    @include m.border(1px, solid, v.$btn-bord-c);
+    background-color: v.$btn-bg-c;
+
+    transition: background-color 0.5s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: v.$btn-bg-hover;
+    }
+}
+
+.modal-suggestion-text-info {
+    @include m.text-character(14px, 26px, v.$light-c-t);
+    font-weight: 300;
+    text-align: center;
+}

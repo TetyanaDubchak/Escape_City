@@ -68,7 +68,77 @@
     width: 375px;
     padding-left: 38px;
     padding-right: 38px;
+}
 
+.social-main-link{
+    background-color: v.$btn-bg-c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include m.size(54px,54px);
+
+    transition: background-color 0.3s ease-out;
+
+    &:hover,
+    &:focus{
+        background-color: v.$btn-bg-hover;
+    }
+}
+
+.hero-scroll-wrapper{
+    max-width: 94px;
+    height: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-scroll-arrow{
+    @include m.size(14px,28px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-scroll-circle span{
+    display: block;
+    @include m.size(6px, 14px);
+    background-color: #D9D9D9;
+    border-radius: 13px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    animation-name: scroll;
+    animation-duration: 2.5s;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;
+}
+
+.hero-scroll-circle{
+    position: relative;
+
+&::before {
+        content: "";
+        display: inline-block;
+        @include m.size(32px, 60px);
+        @include m.border(1px, solid, v.$light-bg-c);
+        border-radius: 26px;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        top:20%;
+    }
+
+    50% {
+            top: 50%;
+        }
+
+    100% {
+        top:20%;
+    }
 }
 
 @media screen and (max-width: v.$max-mob-m) {
@@ -147,6 +217,9 @@ screen and (min-resolution: 2dppx)  {
     .social-main-wrapper {
         width: 1199px;
     }
+    .social-main-link {
+            @include m.size(100px, 100px);
+        }
 
     .hero-social-icon-t{
         @include m.size(100px,100px);
@@ -157,6 +230,8 @@ screen and (min-resolution: 2dppx)  {
     }
 
     .hero-link-call{
+        position: relative;
+        z-index: 11;
         font-weight: 400;
         @include m.paddings(9px,37px,9px,37px);
         background-color: v.$btn-bg-c;
@@ -166,8 +241,15 @@ screen and (min-resolution: 2dppx)  {
         align-self: center;
         justify-self: flex-end;
 
+        transition: background-color 0.3s ease-out;
+        
+            &:hover,
+            &:focus {
+                background-color: v.$btn-bg-hover;
+            }
     }
 
+        
 }
 
 @media screen and (min-width: v.$desk-2-m){

@@ -19,10 +19,27 @@
     margin-bottom: 24px;
 }
 
+.information-section-item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.information-section-item:not(:last-child)::after{
+    content: '';
+    display: block;
+    position: absolute;
+    @include m.size(1px,20px);
+    border-radius: 50%;
+    background-color: v.$dark-text-c;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .information-section-link{
     font-weight: 400;
     @include m.text-character(14px,24px, v.$neutral-t-c);
-
     &:hover, &:focus{
         text-transform: uppercase;
         text-decoration: underline;
@@ -68,10 +85,10 @@
 
 // Desktop styles
 
-@media screen and (min-width: v.$desk-5-m){
+@media screen and (min-width: v.$desk-1-m){
    
 .information-container {
-    @include m.paddings(170px, 363px, 146px,363px)
+    @include m.paddings(170px, 50px, 146px,50px)
 }
 
 .information-title {
@@ -90,7 +107,7 @@
 .information-section-list{
     display: flex !important;
     justify-content: space-between;
-    column-gap: 30px;
+    
     margin-bottom: 58px;
 }
 
@@ -134,4 +151,16 @@
     width: calc((100% - 136px)/3);
     column-gap: 40px;
 }
+}
+
+@media screen and (min-width: v.$desk-4-m) {
+    .information-container {
+        @include m.paddings(170px, 210px, 146px, 210px)
+    }
+}
+
+@media screen and (min-width: v.$desk-5-m){
+    .information-container {
+        @include m.paddings(170px, 363px, 146px, 363px)
+    }
 }

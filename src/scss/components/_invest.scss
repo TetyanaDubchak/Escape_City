@@ -39,7 +39,6 @@
     overflow: hidden;
     margin-bottom: 12px;
     width: 100%;
-    height: 100%;
 }
 
 .invest-overlay{
@@ -48,14 +47,13 @@
     @include m.size(100%,100%);
     left: 0;
     top: 0;
-    overflow: hidden;
+    overflow: auto;
     transform: translate(100%, 0);
     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #000000B2;
 }
 
-.invest-picture-item:hover .invest-overlay,
-.invest-picture-item:focus .invest-overlay{
+ .invest-overlay.open{
     opacity: 1;
     transform: translate(0, 0);
 }
@@ -67,7 +65,7 @@
     }
 }
 
-@media screen and (max-width: 1919px) {
+@media screen and (max-width:v.$max-mob-m) {
     .invest-btn{
         @include m.visually-hidden;
     }
@@ -79,7 +77,7 @@
 
 // Desktop styles
 
-@media screen and (min-width: v.$desk-5-m){
+@media screen and (min-width: v.$desk-1-m){
     .invest-title-wrapper {
         padding:0;
     }
@@ -93,13 +91,12 @@
         padding: 0;
         position: relative;
         min-height: 750px;
+        transition: min-height 0.5s ease-out;
         
         &.expanded{
-            min-height: 1980px;
-            transition: min-height 0.5s ease-in-out;
+            min-height: 1940px;      
         }
     }
-
     .invest-content-wrapper{
         position: absolute;
         top: -208px;
@@ -111,7 +108,7 @@
         align-items: center;
         @include m.paddings(112px,22px,28px,22px);
         @include m.border(1px,solid,#EFDDD2);
-        max-width: 1370px;
+        width: 1100px;
         background-color: v.$light-bg-c;
     }
 
@@ -124,6 +121,7 @@
     }
 
     .invest-picture-item{
+        height: auto;
         max-width: calc((100% - 66px)/3);
     }
 
@@ -148,5 +146,17 @@
                 background-color: v.$btn-bg-hover;
             }
     }
+}
 
+@media screen and (min-width: v.$desk-3-m){
+.invest-content-wrapper{
+    width: 1370px;
+}
+
+.invest-container{
+    min-height: 840px;
+    &.expanded {
+        min-height: 2140px;
+        }
+}
 }

@@ -137,16 +137,21 @@
 
 @media screen and (min-width: v.$desk-3-m){
 .location-container {
-        @include m.paddings(56px, 365px, 140px, 166px);
+        @include m.paddings(56px, 160px, 140px, 160px);
     }
 
 .location-map-wrapper {
+    
     min-width: 736px;
     min-height: 690px;
-
     }
 
 .location-text.expanded {
-    @include m.cut-text-expanded(620px);
+    @include m.cut-text-expanded(1120px);
 }
 }
+
+@media screen and (min-width: v.$desk-5-m) {
+    .location-container {
+        @include m.paddings(56px, 365px, 140px, 166px);
+    }}

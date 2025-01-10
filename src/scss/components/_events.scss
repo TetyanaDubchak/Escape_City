@@ -36,21 +36,26 @@
     .events-button-next {
         @include m.visually-hidden
     }
+
+    .events-cols {
+        @include m.visually-hidden
+    }
+
 }
 
 // Desktop styles
-@media screen and (min-width: v.$desk-5-m){
+@media screen and (min-width: v.$desk-1-m){
     .events-container {
         @include m.paddings(0px, 0px, 0px, 0px);
-        height: 620px;
+        height: 520px;
         position: relative;
     }
 
     .events-extra-container {
-        max-width: 1370px;
+        max-width: 71%;
         position: absolute;
-        top: -84px;
-        left: 275px; 
+        top: -134px;
+        left: 14%; 
         @include m.border(1px,solid,#EFDDD2);
         @include m.paddings(48px, 88px, 134px, 88px);
         background-color: v.$light-bg-c;
@@ -64,6 +69,8 @@
     .swiper-events {
         margin-bottom: 50px;
         padding-bottom: 30px;
+        padding-left: 78px;
+        padding-right: 78px;;
     }
 
     .events-text-wrapper {
@@ -94,24 +101,59 @@
         background-color: #424148;
         }
 
+    .events-cols{
+        @include m.text-character(16px,34px,v.$dark-text-c);
+        position: absolute;
+        right: 78px;
+    }
+
     .events-button-prev{
-        background-color: transparent !important;
+        background-color: v.$gold-t-c;
         padding: 0 !important;
         border-color: transparent;
         @include m.size(68px,68px);
+
         &::after{
             content: '';
+        }
+        left: 0;
+
+        transition: background-color 0.3s ease-out;
+        &:hover,
+        &:focus{
+            background-color: #EFDDD2;
         }
     }
 
     .events-button-next{
-        background-color: transparent !important;
+        background-color: v.$gold-t-c;
         padding: 0 !important;
         border-color: transparent;
         @include m.size(68px,68px);
+
         &::after{
             content: '';
         }
+        right: 0;
+
+        transition: background-color 0.3s ease-out;
+        &:hover,
+        &:focus{
+            background-color: #EFDDD2;
+        }
     }
 
+}
+
+@media screen and (min-width: v.$desk-3-m) {
+.events-container {
+        height: 620px;
+        
+    }
+}
+
+@media screen and (min-width: v.$desk-5-m) {
+    .events-cols{
+        right: 90px;
+    }
 }
