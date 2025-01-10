@@ -8,6 +8,7 @@
 }
 
 .hero-container{ 
+    position: relative;
     background-image: url("../.././images/Hero/hero-mobile.jpg");
     background-size: cover;
     background-position: center;
@@ -26,7 +27,7 @@
 
     & span{
         display: block;
-        background: url(../../../images/Hero/logo-bukovel.svg) center no-repeat;
+        background: url(../.././images/Hero/logo-bukovel.svg) center no-repeat;
         @include m.size(110px, 28px)
     }
 }
@@ -87,6 +88,10 @@
 }
 
 .hero-scroll-wrapper{
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
     max-width: 94px;
     height: 130px;
     margin-left: auto;
@@ -213,6 +218,29 @@ screen and (min-resolution: 2dppx)  {
         transform: rotate(270deg) translateY(-120%) translateX(-40px);
         margin-bottom: 190px;
     }
+
+    .hero-scroll-wrapper{
+        bottom: 15%;
+    }
+
+    .hero-scroll-arrow{
+        @include m.size(27px,52px);
+        &>img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .hero-scroll-circle span{
+        @include m.size(9px, 22px);
+        top: 20%;
+    }
+    .hero-scroll-circle{
+        &::before {
+        @include m.size(46px, 88px);
+        }
+    }
+
 
     .social-main-wrapper {
         width: 1199px;

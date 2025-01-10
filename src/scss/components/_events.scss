@@ -15,6 +15,10 @@
     margin-bottom: 16px;
 }
 
+.swiper-slide-events img{
+    @include m.border(1px,solid,#0A0A0BB2)
+}
+
 .events-text-wrapper{
     padding-left: 24px;
     padding-right: 24px;

@@ -42,7 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
       1399: {
-        slidesPerView:4.8,
+        slidesPerView: 4.8,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
       }
     }
   });
@@ -261,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 2.6,
       },
       1199: {
-        slidesPerView: 3,
+        slidesPerView: 1.2,
         centeredSlides: true,
         spaceBetween: 0,
         navigation: {
